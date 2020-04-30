@@ -1,6 +1,6 @@
 {
   "magic": "B8n2c@e8kvfx",
-  "timestamp": "2020-04-20T21:31:53.772660+00:00",
+  "timestamp": "2020-04-30T18:46:12.106220+00:00",
   "repo": "MikeBishop/dns-alt-svc",
   "labels": [
     {
@@ -1481,9 +1481,17 @@
       "labels": [],
       "body": "The order of the SvcFieldParams is not meaningful.  Should we require (and enforce?) that they appear in key order?  This makes serialization more annoying to implement, but also removes a source of entropy that could be used to fingerprint authoritative implementations.",
       "createdAt": "2019-12-17T18:54:50Z",
-      "updatedAt": "2019-12-17T18:54:50Z",
+      "updatedAt": "2020-04-20T23:02:42Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "moonshiner",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "no.   they should be easy to sort when they arrive, yes? \r\n",
+          "createdAt": "2020-04-20T23:02:42Z",
+          "updatedAt": "2020-04-20T23:02:42Z"
+        }
+      ]
     },
     {
       "number": 98,
@@ -2313,9 +2321,17 @@
       "labels": [],
       "body": "Currently, the examples come before the formal definition of the RR type.  It might be sensible to move them after instead.",
       "createdAt": "2020-04-20T21:20:50Z",
-      "updatedAt": "2020-04-20T21:20:50Z",
+      "updatedAt": "2020-04-20T22:29:44Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "moonshiner",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "+1",
+          "createdAt": "2020-04-20T22:29:44Z",
+          "updatedAt": "2020-04-20T22:29:44Z"
+        }
+      ]
     },
     {
       "number": 136,
@@ -2338,6 +2354,37 @@
           "body": "Related clarification suggestion:\r\n\r\n> 6. In Section 2.2 it says (in reference to param field values):\r\n> \r\n> \u00a0 \u00a0o\u00a0 an octet string of the length defined by the previous field.\r\n> \r\n> It might be good to say here that the format of this octet string is defined\r\n> according to the corresponding SvcParamKey, and then reference section 6 for\r\n> ths currently defined keys. The same applies for section 2.1.1 for the\r\n> presentation format.",
           "createdAt": "2020-04-20T21:28:16Z",
           "updatedAt": "2020-04-20T21:28:16Z"
+        }
+      ]
+    },
+    {
+      "number": 138,
+      "id": "MDU6SXNzdWU2MDM1NTcwNDI=",
+      "title": "Request: combine ABNF in one place",
+      "url": "https://github.com/MikeBishop/dns-alt-svc/issues/138",
+      "state": "OPEN",
+      "author": "moonshiner",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "This is more of a \"nice to have\" but would it be possible to have an appendix with all the ABNF in one place, along with the references to other documents where other definitions exist? \r\n\r\nBe glad to send a pull request. ",
+      "createdAt": "2020-04-20T21:47:58Z",
+      "updatedAt": "2020-04-21T03:00:11Z",
+      "closedAt": null,
+      "comments": [
+        {
+          "author": "bemasc",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Sure, PRs welcome!  EDIT: If you're looking at the ABNF, you might want to consider whether it's correct as stated.  Unfortunately, there's no definitive ABNF for zone file format, and some aspects seem ambiguous.",
+          "createdAt": "2020-04-21T00:30:24Z",
+          "updatedAt": "2020-04-21T00:31:38Z"
+        },
+        {
+          "author": "moonshiner",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "https://github.com/MikeBishop/dns-alt-svc/pull/139  is to fix up minor validation issues. \r\n",
+          "createdAt": "2020-04-21T03:00:11Z",
+          "updatedAt": "2020-04-21T03:00:11Z"
         }
       ]
     }
@@ -9649,11 +9696,19 @@
       "labels": [],
       "body": "",
       "createdAt": "2020-03-11T14:28:53Z",
-      "updatedAt": "2020-04-14T03:25:27Z",
+      "updatedAt": "2020-04-30T02:23:58Z",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
-      "comments": [],
+      "comments": [
+        {
+          "author": "bemasc",
+          "authorAssociation": "COLLABORATOR",
+          "body": "> Did we intend to remove \"## Differences from the proposed ESNI record \"?\r\n\r\nI removed it because the ESNI record proposal no longer appears in the ESNI (now ECHO) draft, so there's no longer anything to compare against.  Ultimately, I hope to get rid of all of these comparisons before RFC.\r\n\r\n> Would we be better off with calling this \"tlsecho\" instead of \"echoconfig\" ?\r\n(I think either is fine.)\r\n\r\nI prefer \"echoconfig\", since (a) it's closer to the ECHO draft terminology, and (b) it avoids possible confusion around TLS vs QUIC.",
+          "createdAt": "2020-04-30T02:23:58Z",
+          "updatedAt": "2020-04-30T02:23:58Z"
+        }
+      ],
       "reviews": [
         {
           "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3MzczNTQ3NTk2",
@@ -9867,6 +9922,67 @@
       "mergedAt": null,
       "mergedBy": null,
       "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 139,
+      "id": "MDExOlB1bGxSZXF1ZXN0NDA2NDA4NTIw",
+      "title": "Fix up ABNF to comply with RFC5234",
+      "url": "https://github.com/MikeBishop/dns-alt-svc/pull/139",
+      "state": "MERGED",
+      "author": "moonshiner",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "in 5234, the rulename says it must contain a \"combination of alphabetics, digits, and hyphens (dashes)\"\r\n\r\nupdated ALPHA_LC\r\n\r\nalso, %5d-%FF was slightly incorrect.   ",
+      "createdAt": "2020-04-21T02:59:32Z",
+      "updatedAt": "2020-04-21T03:03:01Z",
+      "closedAt": "2020-04-21T03:03:01Z",
+      "mergedAt": "2020-04-21T03:03:01Z",
+      "mergedBy": "bemasc",
+      "comments": [
+        {
+          "author": "bemasc",
+          "authorAssociation": "COLLABORATOR",
+          "body": ":+1: ",
+          "createdAt": "2020-04-21T03:02:56Z",
+          "updatedAt": "2020-04-21T03:02:56Z"
+        }
+      ],
+      "reviews": []
+    },
+    {
+      "number": 140,
+      "id": "MDExOlB1bGxSZXF1ZXN0NDA4MDE2MzY1",
+      "title": "Clarify serialization of values of unknown SvcParamKeys",
+      "url": "https://github.com/MikeBishop/dns-alt-svc/pull/140",
+      "state": "MERGED",
+      "author": "DesWurstes",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "I've added the following:\r\n\r\n```\r\nWhen decoding values of unrecognized keys in the presentation format:\r\n\r\n* a character other than \"\\\" represents its ASCII value in wire format.\r\n* the character \"\\\" followed by three decimal digits, up to 255, represents\r\n  an octet in the wire format.\r\n* the character \"\\\" followed by any allowed character, except a decimal digit,\r\n  represents the subsequent character's ASCII value.\r\n\r\n```\r\nand some other changes as discussed with bemasc in https://github.com/MikeBishop/dns-alt-svc/pull/140/commits/c69812c542fcdce466717f2f55e6ec0a5966e740\r\n\r\nPossible todo:\r\nTODO remove outside ascii characters from alpn, inherit escaping from values of private keys\r\n\r\n---\r\nResolved questions:\r\n\r\nAnd escaped alpn values in the presentation format can contain characters outside the ASCII range, non-visible characters or even the null character. Should I change that too?\r\n\r\nMoreover, some alpn values are in the gray area: They fit in 255 octets in wire format, but they are longer than 255 characters in the presentation format. (For example `,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,`) We should ban those alpn values too?\r\n\r\nSimilarly, *The presentation value of \"alpn\" is a comma-separated list of one or more \"alpn-id\"s.*, It should say at least one alpn value for the wire format as well?\r\n\r\nAnd since there's no requirement about the order of the pairs in the presentation format, duplicate pairs are allowed?\r\n\r\n---\r\nand I would like to add [my implementation](https://github.com/miekg/dns/pull/1067) and [this implementation](https://github.com/rthalley/dnspython/pull/452) to the list. That should be a separate pull request?",
+      "createdAt": "2020-04-23T15:57:47Z",
+      "updatedAt": "2020-04-30T18:45:20Z",
+      "closedAt": "2020-04-30T18:45:19Z",
+      "mergedAt": "2020-04-30T18:45:19Z",
+      "mergedBy": "bemasc",
+      "comments": [
+        {
+          "author": "bemasc",
+          "authorAssociation": "COLLABORATOR",
+          "body": "> And escaped alpn values in the presentation format can contain characters outside the ASCII range, non-visible characters or even the null character. Should I change that too?\r\n\r\nI guess so.  It's unlikely ever to be an issue (putting non-ASCII values in the ALPN registry would be very weird).\r\n\r\n> Moreover, some alpn values are in the gray area: They fit in 255 octets in wire format, but they are longer than 255 characters in the presentation format. (For example ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,) We should ban those alpn values too?\r\n\r\nNo, we shouldn't have a length limit in the presentation format.\r\n\r\n> Similarly, The presentation value of \"alpn\" is a comma-separated list of one or more \"alpn-id\"s., It should say at least one alpn value for the wire format as well?\r\n\r\nIf you would prefer to make that a wire format syntax error, I'm fine with that.  I don't think it does any harm, but I suppose it's one less weird variation that could go unnoticed.\r\n\r\n> And since there's no requirement about the order of the pairs in the presentation format, duplicate pairs are allowed?\r\n\r\nNo, duplicate pairs are not allowed in the presentation format.  If the text is unclear on that point, please suggest a clarification.",
+          "createdAt": "2020-04-30T02:20:43Z",
+          "updatedAt": "2020-04-30T02:20:43Z"
+        },
+        {
+          "author": "bemasc",
+          "authorAssociation": "COLLABORATOR",
+          "body": ":+1: ",
+          "createdAt": "2020-04-30T18:45:11Z",
+          "updatedAt": "2020-04-30T18:45:11Z"
+        }
+      ],
       "reviews": []
     }
   ]
