@@ -1,6 +1,6 @@
 {
   "magic": "B8n2c@e8kvfx",
-  "timestamp": "2020-04-30T18:46:12.106220+00:00",
+  "timestamp": "2020-05-01T16:03:39.811504+00:00",
   "repo": "MikeBishop/dns-alt-svc",
   "labels": [
     {
@@ -2362,15 +2362,15 @@
       "id": "MDU6SXNzdWU2MDM1NTcwNDI=",
       "title": "Request: combine ABNF in one place",
       "url": "https://github.com/MikeBishop/dns-alt-svc/issues/138",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "moonshiner",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "This is more of a \"nice to have\" but would it be possible to have an appendix with all the ABNF in one place, along with the references to other documents where other definitions exist? \r\n\r\nBe glad to send a pull request. ",
       "createdAt": "2020-04-20T21:47:58Z",
-      "updatedAt": "2020-04-21T03:00:11Z",
-      "closedAt": null,
+      "updatedAt": "2020-04-30T18:46:39Z",
+      "closedAt": "2020-04-30T18:46:39Z",
       "comments": [
         {
           "author": "bemasc",
@@ -9963,7 +9963,7 @@
       "labels": [],
       "body": "I've added the following:\r\n\r\n```\r\nWhen decoding values of unrecognized keys in the presentation format:\r\n\r\n* a character other than \"\\\" represents its ASCII value in wire format.\r\n* the character \"\\\" followed by three decimal digits, up to 255, represents\r\n  an octet in the wire format.\r\n* the character \"\\\" followed by any allowed character, except a decimal digit,\r\n  represents the subsequent character's ASCII value.\r\n\r\n```\r\nand some other changes as discussed with bemasc in https://github.com/MikeBishop/dns-alt-svc/pull/140/commits/c69812c542fcdce466717f2f55e6ec0a5966e740\r\n\r\nPossible todo:\r\nTODO remove outside ascii characters from alpn, inherit escaping from values of private keys\r\n\r\n---\r\nResolved questions:\r\n\r\nAnd escaped alpn values in the presentation format can contain characters outside the ASCII range, non-visible characters or even the null character. Should I change that too?\r\n\r\nMoreover, some alpn values are in the gray area: They fit in 255 octets in wire format, but they are longer than 255 characters in the presentation format. (For example `,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,`) We should ban those alpn values too?\r\n\r\nSimilarly, *The presentation value of \"alpn\" is a comma-separated list of one or more \"alpn-id\"s.*, It should say at least one alpn value for the wire format as well?\r\n\r\nAnd since there's no requirement about the order of the pairs in the presentation format, duplicate pairs are allowed?\r\n\r\n---\r\nand I would like to add [my implementation](https://github.com/miekg/dns/pull/1067) and [this implementation](https://github.com/rthalley/dnspython/pull/452) to the list. That should be a separate pull request?",
       "createdAt": "2020-04-23T15:57:47Z",
-      "updatedAt": "2020-04-30T18:45:20Z",
+      "updatedAt": "2020-05-01T14:18:27Z",
       "closedAt": "2020-04-30T18:45:19Z",
       "mergedAt": "2020-04-30T18:45:19Z",
       "mergedBy": "bemasc",
@@ -9981,6 +9981,104 @@
           "body": ":+1: ",
           "createdAt": "2020-04-30T18:45:11Z",
           "updatedAt": "2020-04-30T18:45:11Z"
+        },
+        {
+          "author": "DesWurstes",
+          "authorAssociation": "CONTRIBUTOR",
+          "body": "@bemasc Thanks, but I've just found an undocumented feature/bug in markdown. This [webpage which I found from Github help pages says](https://daringfireball.net/projects/markdown/syntax#backslash), that the \\ escapes certain characters, which don't include double quotes. However the backslash in the output isn't rendered, it only escapes the next \". So **could you please replace the \\ in [those lines](https://github.com/MikeBishop/dns-alt-svc/blame/master/draft-ietf-dnsop-svcb-httpssvc.md#L396-L403) with \\\\\\\\**? Or is it easier for you if I open a pull request?",
+          "createdAt": "2020-05-01T07:26:08Z",
+          "updatedAt": "2020-05-01T07:26:29Z"
+        },
+        {
+          "author": "bemasc",
+          "authorAssociation": "COLLABORATOR",
+          "body": "It would be easier if you could get it rendering the way you want and send a PR.  Thanks!",
+          "createdAt": "2020-05-01T14:18:27Z",
+          "updatedAt": "2020-05-01T14:18:27Z"
+        }
+      ],
+      "reviews": []
+    },
+    {
+      "number": 141,
+      "id": "MDExOlB1bGxSZXF1ZXN0NDExODA0OTI2",
+      "title": "Clarifications to the key-value definition text",
+      "url": "https://github.com/MikeBishop/dns-alt-svc/pull/141",
+      "state": "OPEN",
+      "author": "bemasc",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Fixes #136",
+      "createdAt": "2020-04-30T19:56:58Z",
+      "updatedAt": "2020-04-30T19:56:58Z",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 142,
+      "id": "MDExOlB1bGxSZXF1ZXN0NDExODA5MTg3",
+      "title": "Move examples to after the specification",
+      "url": "https://github.com/MikeBishop/dns-alt-svc/pull/142",
+      "state": "OPEN",
+      "author": "bemasc",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "This has been requested by multiple reviewers.\r\n\r\nFixes #135",
+      "createdAt": "2020-04-30T20:06:53Z",
+      "updatedAt": "2020-04-30T20:06:53Z",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 143,
+      "id": "MDExOlB1bGxSZXF1ZXN0NDExODExMjEx",
+      "title": "Add warning text about non-default ports",
+      "url": "https://github.com/MikeBishop/dns-alt-svc/pull/143",
+      "state": "OPEN",
+      "author": "bemasc",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "Fixes #134",
+      "createdAt": "2020-04-30T20:11:48Z",
+      "updatedAt": "2020-04-30T20:11:48Z",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "comments": [],
+      "reviews": []
+    },
+    {
+      "number": 144,
+      "id": "MDExOlB1bGxSZXF1ZXN0NDEyMTU3ODk5",
+      "title": "Clean up my rendering mess",
+      "url": "https://github.com/MikeBishop/dns-alt-svc/pull/144",
+      "state": "MERGED",
+      "author": "DesWurstes",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "@bemasc ",
+      "createdAt": "2020-05-01T14:43:30Z",
+      "updatedAt": "2020-05-01T16:03:03Z",
+      "closedAt": "2020-05-01T16:03:03Z",
+      "mergedAt": "2020-05-01T16:03:03Z",
+      "mergedBy": "bemasc",
+      "comments": [
+        {
+          "author": "bemasc",
+          "authorAssociation": "COLLABORATOR",
+          "body": ":+1: ",
+          "createdAt": "2020-05-01T16:02:57Z",
+          "updatedAt": "2020-05-01T16:02:57Z"
         }
       ],
       "reviews": []
