@@ -1,6 +1,6 @@
 {
-  "magic": "B8n2c@e8kvfx",
-  "timestamp": "2020-05-01T16:03:39.811504+00:00",
+  "magic": "E!vIA5L86J2I",
+  "timestamp": "2020-05-07T01:03:42.492091+00:00",
   "repo": "MikeBishop/dns-alt-svc",
   "labels": [
     {
@@ -2463,7 +2463,16 @@
             }
           ]
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "master",
+      "baseRefOid": "992f23c3ca9ed46fadfc3c0c6b847379dabab32a",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "bemasc-random",
+      "headRefOid": "1738dc339d0e517b4b02594c46e962b35fe24e54",
+      "mergeCommit": {
+        "oid": "828f702e45e2bea3b4b422cd2c6578c584e3c8ca"
+      }
     },
     {
       "number": 2,
@@ -3182,7 +3191,16 @@
             }
           ]
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "master",
+      "baseRefOid": "828f702e45e2bea3b4b422cd2c6578c584e3c8ca",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "nygren-httpssvc",
+      "headRefOid": "c48304f1e70d5c9426a6695febfc27b1fae5c7b1",
+      "mergeCommit": {
+        "oid": "9a088ec47f656348b8d58366d86e4ccc38eadb5f"
+      }
     },
     {
       "number": 3,
@@ -3201,7 +3219,16 @@
       "mergedAt": "2019-05-24T21:16:32Z",
       "mergedBy": "enygren",
       "comments": [],
-      "reviews": []
+      "reviews": [],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "nygren-httpssvc",
+      "baseRefOid": "3afab645fbdc5734d6e7af0046c6922a2976ebe9",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "bemasc-aname-comparison",
+      "headRefOid": "a9e61fa2a0c260c540c95ecef1ca28463c66dca6",
+      "mergeCommit": {
+        "oid": "c63091aba531059d5221a44dca585288cf0a5348"
+      }
     },
     {
       "number": 4,
@@ -3234,7 +3261,16 @@
           "updatedAt": "2019-05-24T21:17:26Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "nygren-httpssvc",
+      "baseRefOid": "3afab645fbdc5734d6e7af0046c6922a2976ebe9",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "bemasc-esnikeys",
+      "headRefOid": "2ae38b104fd1745646b0025585c2cdc5e841910f",
+      "mergeCommit": {
+        "oid": "d38264d7c7d078c773b1e207c7ed4dfb98476ec2"
+      }
     },
     {
       "number": 5,
@@ -3267,7 +3303,16 @@
           "updatedAt": "2019-05-24T21:19:32Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "nygren-httpssvc",
+      "baseRefOid": "3afab645fbdc5734d6e7af0046c6922a2976ebe9",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "bemasc-hsts",
+      "headRefOid": "51d778881b9ac3ae9092baf31fcf5eb840eb6bd4",
+      "mergeCommit": {
+        "oid": "926f4c01192defe70579f7b7985c6170f703d6dc"
+      }
     },
     {
       "number": 6,
@@ -3300,7 +3345,16 @@
           "updatedAt": "2019-05-24T21:20:19Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "nygren-httpssvc",
+      "baseRefOid": "3afab645fbdc5734d6e7af0046c6922a2976ebe9",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "bemasc-persist",
+      "headRefOid": "d7368ed23b04eb62c23c28c252253c9e36bb0920",
+      "mergeCommit": {
+        "oid": "5810512ceb9a56f559b495707508857924c25214"
+      }
     },
     {
       "number": 7,
@@ -3340,7 +3394,16 @@
             }
           ]
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "nygren-httpssvc",
+      "baseRefOid": "5810512ceb9a56f559b495707508857924c25214",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "bemasc-port",
+      "headRefOid": "31895778cf90d59b3d5f63820b4a5e8852feae2f",
+      "mergeCommit": {
+        "oid": "62138820013b628ba620ed5dc761048341d779b5"
+      }
     },
     {
       "number": 8,
@@ -3373,7 +3436,16 @@
           "updatedAt": "2019-05-24T21:54:01Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "nygren-httpssvc",
+      "baseRefOid": "5810512ceb9a56f559b495707508857924c25214",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "enygren-remove-ecs-reference",
+      "headRefOid": "d52ea5eb30d41253867b22b8345a891d2d4e6609",
+      "mergeCommit": {
+        "oid": "c92bbf7915ff0239eeb9b2bfbd502e27597bf27d"
+      }
     },
     {
       "number": 9,
@@ -3647,7 +3719,16 @@
           "updatedAt": "2019-06-26T00:51:36Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "nygren-httpssvc",
+      "baseRefOid": "79b7ffb456f6b581fa1cfe6e756540eefb6393a3",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "bemasc-srvfail",
+      "headRefOid": "aba8af8ffe31e474629ea565885e04364b7a4ace",
+      "mergeCommit": {
+        "oid": "a5f0685d6007bacc03bdaa6b60239a408f61abd7"
+      }
     },
     {
       "number": 10,
@@ -3848,7 +3929,16 @@
           "updatedAt": "2019-06-14T21:56:05Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "nygren-httpssvc",
+      "baseRefOid": "62138820013b628ba620ed5dc761048341d779b5",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "bemasc-performance",
+      "headRefOid": "38f6f869a3665c6bf17a41676068947fe5a28855",
+      "mergeCommit": {
+        "oid": "8ae87b710b82e3f7ff6c992508e2f9dd2a9e0d38"
+      }
     },
     {
       "number": 11,
@@ -4081,7 +4171,16 @@
           "updatedAt": "2019-06-21T21:27:09Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "nygren-httpssvc",
+      "baseRefOid": "62138820013b628ba620ed5dc761048341d779b5",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "bemasc-fallback",
+      "headRefOid": "f39b72d02baf558d96d7f13e7ee4909d349fef8c",
+      "mergeCommit": {
+        "oid": "f4f020d114756eba6a2780fa65c0ebf4ebfcbe86"
+      }
     },
     {
       "number": 12,
@@ -4114,7 +4213,16 @@
           "updatedAt": "2019-06-19T20:31:25Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "nygren-httpssvc",
+      "baseRefOid": "c92bbf7915ff0239eeb9b2bfbd502e27597bf27d",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "bemasc-formatting",
+      "headRefOid": "dc82fefd1f523f5ec52a0ca45de17e2be04af6e6",
+      "mergeCommit": {
+        "oid": "fb8459e38ecb925a89a61ec359b1a9a2a69c0ed8"
+      }
     },
     {
       "number": 13,
@@ -4147,7 +4255,16 @@
           "updatedAt": "2019-06-19T20:33:31Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "nygren-httpssvc",
+      "baseRefOid": "c92bbf7915ff0239eeb9b2bfbd502e27597bf27d",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "bemasc-port",
+      "headRefOid": "7a0520bfd85c9901d5399f2fe204b274b403ffa4",
+      "mergeCommit": {
+        "oid": "c0f8a369c82ac57c0696409bf08fe005ee49cf71"
+      }
     },
     {
       "number": 14,
@@ -4180,7 +4297,16 @@
           "updatedAt": "2019-06-19T20:29:47Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "nygren-httpssvc",
+      "baseRefOid": "c92bbf7915ff0239eeb9b2bfbd502e27597bf27d",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "bemasc-pri",
+      "headRefOid": "604b7fb589cde07a69fb13a24cb8434e88d631bf",
+      "mergeCommit": {
+        "oid": "74a297e7f2534bb659857e16559c8617d2f45aa2"
+      }
     },
     {
       "number": 15,
@@ -4213,7 +4339,16 @@
           "updatedAt": "2019-06-18T21:30:05Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "nygren-httpssvc",
+      "baseRefOid": "c92bbf7915ff0239eeb9b2bfbd502e27597bf27d",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "bemasc-ma",
+      "headRefOid": "9cfb1b82b56915ae522ca8c92c8630f11e3f66e5",
+      "mergeCommit": {
+        "oid": "18fa63215c6bba5902d4cae1f81828de9f2dcc79"
+      }
     },
     {
       "number": 16,
@@ -4273,7 +4408,16 @@
             }
           ]
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "nygren-httpssvc",
+      "baseRefOid": "18fa63215c6bba5902d4cae1f81828de9f2dcc79",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "bemasc-type",
+      "headRefOid": "3b5d6c704fce12fed3f98101f050d0cfe91680dd",
+      "mergeCommit": {
+        "oid": "187a1c2e7f5548c2aa7752e729813016f844fee0"
+      }
     },
     {
       "number": 17,
@@ -4300,7 +4444,16 @@
           "updatedAt": "2019-06-19T21:31:07Z"
         }
       ],
-      "reviews": []
+      "reviews": [],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "nygren-httpssvc",
+      "baseRefOid": "c0f8a369c82ac57c0696409bf08fe005ee49cf71",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "enygren-remove-sni-param",
+      "headRefOid": "9fae1c6a25e1a15372644b2bc8b27923820a748f",
+      "mergeCommit": {
+        "oid": "79b7ffb456f6b581fa1cfe6e756540eefb6393a3"
+      }
     },
     {
       "number": 18,
@@ -4333,7 +4486,16 @@
           "updatedAt": "2019-06-20T14:57:41Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "nygren-httpssvc",
+      "baseRefOid": "9e5d5a2f60c5410598ca1e9b3c916b75ea452855",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "enygren-fallback-records",
+      "headRefOid": "2b038b32e5e6d99992e2633f7b06e2eb33d2dd97",
+      "mergeCommit": {
+        "oid": "6efc05c52827330bfef52405485f6deb381591d0"
+      }
     },
     {
       "number": 19,
@@ -4374,7 +4536,16 @@
           "updatedAt": "2019-06-20T17:36:53Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "nygren-httpssvc",
+      "baseRefOid": "79b7ffb456f6b581fa1cfe6e756540eefb6393a3",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "enygren-performance",
+      "headRefOid": "a7f557eb308a9cd3611ad12ffbfa4a726567015b",
+      "mergeCommit": {
+        "oid": "1e21475fa32808d5a89a03a6f63c52077ac47208"
+      }
     },
     {
       "number": 20,
@@ -4407,7 +4578,16 @@
           "updatedAt": "2019-06-21T02:03:28Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "nygren-httpssvc",
+      "baseRefOid": "6efc05c52827330bfef52405485f6deb381591d0",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "enygren-to-be-removed-intro",
+      "headRefOid": "66dae2ad9d3cb82aee652f395b4718ea2b3e4e5b",
+      "mergeCommit": {
+        "oid": "41dba7dd2d986beb9f1cadacfba174039c56c4c7"
+      }
     },
     {
       "number": 21,
@@ -4485,7 +4665,16 @@
             }
           ]
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "nygren-httpssvc",
+      "baseRefOid": "6efc05c52827330bfef52405485f6deb381591d0",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "enygren-resolution",
+      "headRefOid": "af86759f1a9ffeaa8786030f8886cf87468a75f0",
+      "mergeCommit": {
+        "oid": "334d532d370e179e8ff1fd9f7847bf9aaa213a91"
+      }
     },
     {
       "number": 22,
@@ -4533,7 +4722,16 @@
             }
           ]
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "nygren-httpssvc",
+      "baseRefOid": "f4f020d114756eba6a2780fa65c0ebf4ebfcbe86",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "enygren-ian-suggestions-1",
+      "headRefOid": "585721cbbbfd0908ffd62be9d079d71ef9f52f80",
+      "mergeCommit": {
+        "oid": "d414f84d1e39faad199679cb4c15310dec5315b7"
+      }
     },
     {
       "number": 25,
@@ -4566,7 +4764,16 @@
           "updatedAt": "2019-06-28T01:04:37Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "nygren-httpssvc",
+      "baseRefOid": "82392badf02331c706eb2d226b128ee038bb04f0",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "bemasc-format",
+      "headRefOid": "805728fae405a8694b296d77aa8a8c91947d291f",
+      "mergeCommit": {
+        "oid": "70a349d569f57d100863b9a017ae82346c976d12"
+      }
     },
     {
       "number": 26,
@@ -4599,7 +4806,16 @@
           "updatedAt": "2019-06-28T00:58:11Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "nygren-httpssvc",
+      "baseRefOid": "a5f0685d6007bacc03bdaa6b60239a408f61abd7",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "bemasc-pri",
+      "headRefOid": "fbdfe03293fe49e359f3c19f8cd6f7c9a417163b",
+      "mergeCommit": {
+        "oid": "82392badf02331c706eb2d226b128ee038bb04f0"
+      }
     },
     {
       "number": 27,
@@ -4640,7 +4856,16 @@
           "updatedAt": "2019-06-28T15:20:33Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "nygren-httpssvc",
+      "baseRefOid": "70a349d569f57d100863b9a017ae82346c976d12",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "enygren-pri-updates",
+      "headRefOid": "ae724a5606930445ccd85c66b300d1afe5a402d7",
+      "mergeCommit": {
+        "oid": "f549f26e420a98297036c4269db66b1e96bb6dd4"
+      }
     },
     {
       "number": 28,
@@ -4673,7 +4898,16 @@
           "updatedAt": "2019-06-28T15:58:51Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "nygren-httpssvc",
+      "baseRefOid": "f549f26e420a98297036c4269db66b1e96bb6dd4",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "enygren-open-discussion-pri",
+      "headRefOid": "3e38a2922b6658c86c0578178f494bf6f4ea17fd",
+      "mergeCommit": {
+        "oid": "fef3e1a24e3bc4a4c350b225d1dc052b8f45d7a4"
+      }
     },
     {
       "number": 29,
@@ -4706,7 +4940,16 @@
           "updatedAt": "2019-06-28T19:56:35Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "nygren-httpssvc",
+      "baseRefOid": "fef3e1a24e3bc4a4c350b225d1dc052b8f45d7a4",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "enygren-remove-sni-param",
+      "headRefOid": "7a39a1be39f5370996fa8773d956de938e391d40",
+      "mergeCommit": {
+        "oid": "aa6d0e3b95127cc4e926dd049f7b6f30b43a9330"
+      }
     },
     {
       "number": 30,
@@ -4739,7 +4982,16 @@
           "updatedAt": "2019-07-01T14:52:54Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "nygren-httpssvc",
+      "baseRefOid": "aa6d0e3b95127cc4e926dd049f7b6f30b43a9330",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "bemasc-typos",
+      "headRefOid": "593e8b453e34b9a07d7a217af5f761e71856c7d0",
+      "mergeCommit": {
+        "oid": "c48304f1e70d5c9426a6695febfc27b1fae5c7b1"
+      }
     },
     {
       "number": 31,
@@ -4772,7 +5024,16 @@
           "updatedAt": "2019-07-03T16:00:29Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "master",
+      "baseRefOid": "9a088ec47f656348b8d58366d86e4ccc38eadb5f",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "enygren-fix-httpsvc-to-httpssvc",
+      "headRefOid": "a7ddcbe9133c7700bf6f06f2e04f2e845950d691",
+      "mergeCommit": {
+        "oid": "5d1da9338e8026df7bf3ac57ebef2a00e630a5b9"
+      }
     },
     {
       "number": 33,
@@ -4805,7 +5066,16 @@
           "updatedAt": "2019-07-08T21:02:46Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "master",
+      "baseRefOid": "242f0f7722303c02fb0b90e4897267e249c557fb",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "enygren-httpssvc-feedback-201907",
+      "headRefOid": "4e52078d6a3c21bb6e94baea5d9486d2236149e4",
+      "mergeCommit": {
+        "oid": "c04513f7b2a9c457dd0f8e2bfbae8c505397691d"
+      }
     },
     {
       "number": 35,
@@ -4871,7 +5141,16 @@
             }
           ]
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "master",
+      "baseRefOid": "5d1da9338e8026df7bf3ac57ebef2a00e630a5b9",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "enygren-remove-wireformat-redundancy",
+      "headRefOid": "97de449f1ddab4940458e18a4a9f2f8460c23ed1",
+      "mergeCommit": {
+        "oid": "1ef3d3a266627c2577a539d88e137c103ab7b096"
+      }
     },
     {
       "number": 36,
@@ -4890,7 +5169,16 @@
       "mergedAt": "2019-07-08T20:13:47Z",
       "mergedBy": "enygren",
       "comments": [],
-      "reviews": []
+      "reviews": [],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "master",
+      "baseRefOid": "8885fdd540604ef97d55d021977ab12251794250",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "enygren-missing-semicolons",
+      "headRefOid": "ffae9befab3b60c9b01888517d81bde217bfd153",
+      "mergeCommit": {
+        "oid": "242f0f7722303c02fb0b90e4897267e249c557fb"
+      }
     },
     {
       "number": 37,
@@ -4923,7 +5211,16 @@
           "updatedAt": "2019-07-08T12:27:44Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "master",
+      "baseRefOid": "64a678a09793e6f14e6f75f0f6a2c8071479197f",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "enygren-hq-h3",
+      "headRefOid": "4f395e9ec0e2e81f2ef3c73e28e25cbb580ef55e",
+      "mergeCommit": {
+        "oid": "8885fdd540604ef97d55d021977ab12251794250"
+      }
     },
     {
       "number": 38,
@@ -4942,7 +5239,16 @@
       "mergedAt": "2019-07-08T13:05:00Z",
       "mergedBy": "enygren",
       "comments": [],
-      "reviews": []
+      "reviews": [],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "master",
+      "baseRefOid": "8885fdd540604ef97d55d021977ab12251794250",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "enygren-readme-and-impl",
+      "headRefOid": "88810c5d19507cf8f1e1c2fd15e4818ea0da90be",
+      "mergeCommit": {
+        "oid": "43eb6348486506ee925886c4946148f07671bc83"
+      }
     },
     {
       "number": 43,
@@ -4975,7 +5281,16 @@
           "updatedAt": "2019-08-20T18:43:41Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "master",
+      "baseRefOid": "c04513f7b2a9c457dd0f8e2bfbae8c505397691d",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "enygren-fix-title",
+      "headRefOid": "5aece38f5033f3d82899d5a51da8f54fe20a034b",
+      "mergeCommit": {
+        "oid": "6d8a728ec6133768283a1c19b647526955867fb2"
+      }
     },
     {
       "number": 50,
@@ -5481,7 +5796,16 @@
           "updatedAt": "2019-09-20T20:45:45Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "enygren-svcb-generalization-1",
+      "baseRefOid": "d34ff409b6d49573acec2b7caaeab4b198934b25",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "bemasc-generalization-1",
+      "headRefOid": "b85bdcd3f091b1271f7a68347d73f27249969f19",
+      "mergeCommit": {
+        "oid": "97ba8ae51e6c957d256dfd31160c2c31da1e63f3"
+      }
     },
     {
       "number": 51,
@@ -5529,7 +5853,16 @@
             }
           ]
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "bemasc-generalization-1",
+      "baseRefOid": "e8662772d0dc217842e546917510b21d0d5d18ab",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "enygren-svcb-generalization-2",
+      "headRefOid": "71adab4b3f62dd5b275327e7d90b8537fa923009",
+      "mergeCommit": {
+        "oid": "cdb286768e431fd274ca9707163de27e4a87fa22"
+      }
     },
     {
       "number": 52,
@@ -5728,7 +6061,16 @@
           "updatedAt": "2019-09-09T20:12:05Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "bemasc-generalization-1",
+      "baseRefOid": "cdcaef2b5ca6b356487930fe5bb074a1900c1a2f",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "bemasc-generalization-2",
+      "headRefOid": "1c2ae4b6475269e42a39825b7567a174071e2ad1",
+      "mergeCommit": {
+        "oid": "c6e3586285307168b1e489a788ed2fdd489c5a37"
+      }
     },
     {
       "number": 53,
@@ -5774,7 +6116,16 @@
           "updatedAt": "2019-09-23T21:03:28Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "master",
+      "baseRefOid": "6c51820908de2f41cdcfe44d54b307afff9a07c4",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "bemasc-proofread",
+      "headRefOid": "4a3761db3988362d51fe08790d36af906a6ab088",
+      "mergeCommit": {
+        "oid": "0b6486523ea9720693329ff64d08519f1acd2600"
+      }
     },
     {
       "number": 54,
@@ -5807,7 +6158,16 @@
           "updatedAt": "2019-09-23T22:53:54Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "master",
+      "baseRefOid": "0b6486523ea9720693329ff64d08519f1acd2600",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "enygren-issue-41",
+      "headRefOid": "2c32c053d7d041f866adc586a366ff6711a7590a",
+      "mergeCommit": {
+        "oid": "d280fdfee16bd03d8ec01a7de13e1b869a6f59da"
+      }
     },
     {
       "number": 56,
@@ -6468,7 +6828,16 @@
             }
           ]
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "master",
+      "baseRefOid": "d280fdfee16bd03d8ec01a7de13e1b869a6f59da",
+      "headRepository": "chris-wood/dns-alt-svc",
+      "headRefName": "caw/edits",
+      "headRefOid": "e6026096e93ff6ca7316dbaa74972ce16d418dcb",
+      "mergeCommit": {
+        "oid": "6deadcf323780c220f21edc0d5c5064fcafe4b56"
+      }
     },
     {
       "number": 62,
@@ -6528,7 +6897,16 @@
             }
           ]
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "master",
+      "baseRefOid": "6deadcf323780c220f21edc0d5c5064fcafe4b56",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "bemasc-race",
+      "headRefOid": "e4d7531c68f7d59acd613691efe2980006a8a834",
+      "mergeCommit": {
+        "oid": "94a17ceb976ae608e586ae1a1eeef8b9dd1b28cf"
+      }
     },
     {
       "number": 64,
@@ -6601,7 +6979,16 @@
           "updatedAt": "2019-11-03T16:43:55Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "master",
+      "baseRefOid": "f22274b1a2289c33cd4f1b17488bfeca486ec28b",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "bemasc-pri",
+      "headRefOid": "52ccd9b5adf5c636fdd27eb9a55f4c2b7a93c4f7",
+      "mergeCommit": {
+        "oid": "a5c921ce10bdd3006b28edb73e5e2b11d7021d81"
+      }
     },
     {
       "number": 65,
@@ -6634,7 +7021,16 @@
           "updatedAt": "2019-10-13T02:20:23Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "master",
+      "baseRefOid": "6deadcf323780c220f21edc0d5c5064fcafe4b56",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "bemasc-semicolon",
+      "headRefOid": "5a0141bc4c777bfea75b8421f651ceba518def18",
+      "mergeCommit": {
+        "oid": "fd5feaa8e0807322448967768b8fc0e60979a5bd"
+      }
     },
     {
       "number": 66,
@@ -6747,7 +7143,16 @@
           "updatedAt": "2019-11-03T16:42:32Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "master",
+      "baseRefOid": "3743162190f58b01e22c631dac5d072adeeefcc2",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "bemasc-lessalt",
+      "headRefOid": "2e56380479cbdc40a782a280f1a1ace507a18352",
+      "mergeCommit": {
+        "oid": "f22274b1a2289c33cd4f1b17488bfeca486ec28b"
+      }
     },
     {
       "number": 67,
@@ -6801,7 +7206,16 @@
           "updatedAt": "2020-01-14T22:53:55Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "master",
+      "baseRefOid": "c72d6439f081bcfbeb8f65754896b3be9baaa657",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "bemasc-wildcard",
+      "headRefOid": "0c4d68919e391125398efe76fc563026f035c418",
+      "mergeCommit": {
+        "oid": "f72e4d2eadeb34c40cab09f5d463f5bfbefcefde"
+      }
     },
     {
       "number": 68,
@@ -6861,7 +7275,16 @@
             }
           ]
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "master",
+      "baseRefOid": "fd5feaa8e0807322448967768b8fc0e60979a5bd",
+      "headRepository": "chris-wood/dns-alt-svc",
+      "headRefName": "caw/esni-reqs",
+      "headRefOid": "6ee9bb39748ae29be56d3a191be787efd7bfb91d",
+      "mergeCommit": {
+        "oid": "6b21e04f2e4f73b11f3205f5e97679ec1a28bcca"
+      }
     },
     {
       "number": 69,
@@ -6907,7 +7330,16 @@
           "updatedAt": "2019-10-25T21:01:28Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "master",
+      "baseRefOid": "fd5feaa8e0807322448967768b8fc0e60979a5bd",
+      "headRepository": "ekr/dns-alt-svc",
+      "headRefName": "relax_hints_text",
+      "headRefOid": "5d9e70307e1e31fa8c200f5c5f21fff0dca35a3d",
+      "mergeCommit": {
+        "oid": "4fc26be1281dfe21bc3d90964a1ab3c4f9a799dd"
+      }
     },
     {
       "number": 70,
@@ -6961,7 +7393,16 @@
           "updatedAt": "2020-01-14T22:56:48Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "master",
+      "baseRefOid": "c72d6439f081bcfbeb8f65754896b3be9baaa657",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "bemasc-hint",
+      "headRefOid": "21976bf59fa9fca20f20515304c823900535d44f",
+      "mergeCommit": {
+        "oid": "9385e296539aea1c860e4e9dd9c0a5d0ec4c8804"
+      }
     },
     {
       "number": 71,
@@ -7036,7 +7477,16 @@
           "updatedAt": "2019-11-03T16:33:18Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "master",
+      "baseRefOid": "a5c921ce10bdd3006b28edb73e5e2b11d7021d81",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "bemasc-esniconfig",
+      "headRefOid": "bd3f6d747b56de8bd38a89784cea21715da56baa",
+      "mergeCommit": {
+        "oid": "759d0c63b6d2bcd110b04b0e8356e035c9ff5204"
+      }
     },
     {
       "number": 72,
@@ -7162,7 +7612,16 @@
           "updatedAt": "2020-01-15T22:47:29Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "master",
+      "baseRefOid": "c67737b96ac84347845f36c07ada1a1f6101bc00",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "bemasc-hsts",
+      "headRefOid": "5d2fc032974e1fb4f1f4ddcf24ecbd1f39cc26ef",
+      "mergeCommit": {
+        "oid": "cf37c85890f1d46ffebff7da6556d5d4028b040b"
+      }
     },
     {
       "number": 76,
@@ -7295,7 +7754,16 @@
           "updatedAt": "2020-01-15T22:51:32Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "master",
+      "baseRefOid": "973820db37d4577750bb23506eb23615bb6de5f7",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "bemasc-ttl",
+      "headRefOid": "45567cc2ee2af889e23482190d6e38445e04d0e6",
+      "mergeCommit": {
+        "oid": "30d65cb6e04e2dedbb0d368b87db575c3ee01119"
+      }
     },
     {
       "number": 77,
@@ -7460,7 +7928,16 @@
           "updatedAt": "2020-01-15T22:49:45Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "master",
+      "baseRefOid": "973820db37d4577750bb23506eb23615bb6de5f7",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "bemasc-clarity",
+      "headRefOid": "d2b6c49297f6f28704f8357b357d799214926b1a",
+      "mergeCommit": {
+        "oid": "35ab6b46bd05ffcf354eaebbcc6b24a838de00dd"
+      }
     },
     {
       "number": 78,
@@ -7493,7 +7970,16 @@
           "updatedAt": "2019-11-14T02:29:57Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "master",
+      "baseRefOid": "973820db37d4577750bb23506eb23615bb6de5f7",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "bemasc-alpn",
+      "headRefOid": "069110e07592011dc09aee7a1a7ab2e98a33244a",
+      "mergeCommit": {
+        "oid": "9c133e81c8932d4017a9cff040577c09273186c7"
+      }
     },
     {
       "number": 85,
@@ -7596,7 +8082,16 @@
           "updatedAt": "2020-01-15T21:25:11Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "master",
+      "baseRefOid": "9c133e81c8932d4017a9cff040577c09273186c7",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "bemasc-examples",
+      "headRefOid": "7df0771f219813df4f7ca13b96f1bee19eff37ea",
+      "mergeCommit": {
+        "oid": "c67737b96ac84347845f36c07ada1a1f6101bc00"
+      }
     },
     {
       "number": 89,
@@ -7703,7 +8198,14 @@
             }
           ]
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "master",
+      "baseRefOid": "9c133e81c8932d4017a9cff040577c09273186c7",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "bemasc-alpn",
+      "headRefOid": "c4eebef4f76ee1ac45e7a518e4e402bc46804c51",
+      "mergeCommit": null
     },
     {
       "number": 93,
@@ -7787,7 +8289,16 @@
           "updatedAt": "2019-12-19T16:31:38Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "master",
+      "baseRefOid": "9c133e81c8932d4017a9cff040577c09273186c7",
+      "headRepository": "davidben/dns-alt-svc",
+      "headRefName": "hsts-part-two",
+      "headRefOid": "7f911ef86f87fea50dd358f52339c2e9791a867e",
+      "mergeCommit": {
+        "oid": "127af38059c6eaa213c7b43edd86ad11108ec6cf"
+      }
     },
     {
       "number": 94,
@@ -7849,7 +8360,14 @@
           "updatedAt": "2020-03-05T16:03:16Z"
         }
       ],
-      "reviews": []
+      "reviews": [],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "master",
+      "baseRefOid": "9c133e81c8932d4017a9cff040577c09273186c7",
+      "headRepository": "davidben/dns-alt-svc",
+      "headRefName": "duplicate-ip-hints",
+      "headRefOid": "1c169dda92b382133f5c3b370f5f3b1c9ebc8aea",
+      "mergeCommit": null
     },
     {
       "number": 97,
@@ -8339,7 +8857,16 @@
             }
           ]
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "master",
+      "baseRefOid": "bc40093d09c5bcf09c827d2ab438266b781b26dd",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "bemasc-transport",
+      "headRefOid": "566806a329b5c326bff1de8a4268d4079bc929b8",
+      "mergeCommit": {
+        "oid": "21c1a83dcb298abe5758ccea4f45cc37a8bc0275"
+      }
     },
     {
       "number": 102,
@@ -8408,7 +8935,14 @@
             }
           ]
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "master",
+      "baseRefOid": "9385e296539aea1c860e4e9dd9c0a5d0ec4c8804",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "enygren-alt-used-example",
+      "headRefOid": "6d2598e9ce3c40356d1ad7d1e9bf670e0be4f9e1",
+      "mergeCommit": null
     },
     {
       "number": 104,
@@ -8523,7 +9057,16 @@
           "updatedAt": "2020-01-27T21:08:37Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "master",
+      "baseRefOid": "30d65cb6e04e2dedbb0d368b87db575c3ee01119",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "bemasc-srvfail",
+      "headRefOid": "cea004f1071604d3a335fa19c73ec04147516fa1",
+      "mergeCommit": {
+        "oid": "08bb96aca32a86c41805dcc8633ee8e0f1f8c82b"
+      }
     },
     {
       "number": 106,
@@ -8670,7 +9213,16 @@
           "updatedAt": "2020-02-14T17:09:57Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "master",
+      "baseRefOid": "bc40093d09c5bcf09c827d2ab438266b781b26dd",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "bemasc-fallback",
+      "headRefOid": "66450828406dcc0e67d72aad6f40316cd6fc8bc9",
+      "mergeCommit": {
+        "oid": "343eac0b3b115d8064958fbbd1393d791ba704d6"
+      }
     },
     {
       "number": 108,
@@ -8718,7 +9270,16 @@
           "updatedAt": "2020-01-24T19:05:14Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "master",
+      "baseRefOid": "30d65cb6e04e2dedbb0d368b87db575c3ee01119",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "bemasc-split",
+      "headRefOid": "f1f25ae8ed0dc0ded50507be5bfe00833f461c60",
+      "mergeCommit": {
+        "oid": "bc40093d09c5bcf09c827d2ab438266b781b26dd"
+      }
     },
     {
       "number": 109,
@@ -9132,7 +9693,16 @@
           "updatedAt": "2020-03-05T02:29:55Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "master",
+      "baseRefOid": "21c1a83dcb298abe5758ccea4f45cc37a8bc0275",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "bemasc-singular",
+      "headRefOid": "7f26432a43d40399be51457d57eb25b8e96d8f45",
+      "mergeCommit": {
+        "oid": "e8966ec2f0b94572380328a9857bb04c37233706"
+      }
     },
     {
       "number": 110,
@@ -9159,7 +9729,16 @@
           "updatedAt": "2020-02-20T15:10:00Z"
         }
       ],
-      "reviews": []
+      "reviews": [],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "master",
+      "baseRefOid": "21c1a83dcb298abe5758ccea4f45cc37a8bc0275",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "enygren-wkumari-github-reference",
+      "headRefOid": "1c9d44f4af33797977d229be0f089d5de0878d2a",
+      "mergeCommit": {
+        "oid": "8c9ab4f5fcd579c256b05e42fbd8075cc89edb99"
+      }
     },
     {
       "number": 114,
@@ -9192,7 +9771,16 @@
           "updatedAt": "2020-03-03T15:55:00Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "master",
+      "baseRefOid": "8c9ab4f5fcd579c256b05e42fbd8075cc89edb99",
+      "headRepository": "martinthomson/dns-alt-svc",
+      "headRefName": "patch-1",
+      "headRefOid": "9209c686c30e97b40821e5d7d39f6b8f68e33356",
+      "mergeCommit": {
+        "oid": "974bbf9510769e39da5e1d0157276b3e984862f3"
+      }
     },
     {
       "number": 116,
@@ -9589,7 +10177,16 @@
             }
           ]
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "master",
+      "baseRefOid": "e8966ec2f0b94572380328a9857bb04c37233706",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "enygren-alpn-revisited",
+      "headRefOid": "a720d38cae0e73517fac6f3193cdca3c1b0e26df",
+      "mergeCommit": {
+        "oid": "db3e29b4e108a3c13fa7ec6e88ba56e391541b87"
+      }
     },
     {
       "number": 118,
@@ -9630,7 +10227,14 @@
           "updatedAt": "2020-03-09T22:40:57Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "master",
+      "baseRefOid": "db3e29b4e108a3c13fa7ec6e88ba56e391541b87",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "bemasc-alias-wording",
+      "headRefOid": "b43c17ad9bb930b073859829d452d6a9f1061995",
+      "mergeCommit": null
     },
     {
       "number": 119,
@@ -9649,7 +10253,16 @@
       "mergedAt": "2020-03-10T01:34:39Z",
       "mergedBy": "bemasc",
       "comments": [],
-      "reviews": []
+      "reviews": [],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "bemasc-alias-wording",
+      "baseRefOid": "92fc43010801eff33479df80461de07a6b834f16",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "bemasc-alias-dot",
+      "headRefOid": "086b1c0bc69ebdcbc763ef5243ac17f9f5cd2390",
+      "mergeCommit": {
+        "oid": "590cc7d90672baaeb554b571c70c1fed6d4d52cb"
+      }
     },
     {
       "number": 126,
@@ -9682,7 +10295,16 @@
           "updatedAt": "2020-04-13T20:47:56Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "master",
+      "baseRefOid": "db3e29b4e108a3c13fa7ec6e88ba56e391541b87",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "bemasc-missing-priority",
+      "headRefOid": "077e8b82a989e49a4979d5f4d13924c89cbda684",
+      "mergeCommit": {
+        "oid": "c4ca7f85fe3c45bcf837430e5cb148d5831881e8"
+      }
     },
     {
       "number": 127,
@@ -9783,7 +10405,14 @@
           "updatedAt": "2020-04-13T20:47:34Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "master",
+      "baseRefOid": "db3e29b4e108a3c13fa7ec6e88ba56e391541b87",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "bemasc-echo",
+      "headRefOid": "ca8def2904fe6cbbe11fcb6cb2c7ecaed420afdf",
+      "mergeCommit": null
     },
     {
       "number": 128,
@@ -9816,7 +10445,16 @@
           "updatedAt": "2020-04-13T20:35:06Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "bemasc-echo",
+      "baseRefOid": "35950761add3ba218d89826afbe0c4bb2cb941a6",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "bemasc-twotypes",
+      "headRefOid": "311a4c3586d4584f0d39e2df57a01216a239d5e8",
+      "mergeCommit": {
+        "oid": "c861788038df1a2672d41525cade47fa2dc7272b"
+      }
     },
     {
       "number": 129,
@@ -9870,7 +10508,16 @@
           "updatedAt": "2020-04-14T03:25:12Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "bemasc-echo",
+      "baseRefOid": "35950761add3ba218d89826afbe0c4bb2cb941a6",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "bemasc-zones",
+      "headRefOid": "16ab7a0d13cda774bd736ff5f6b8784376414fbf",
+      "mergeCommit": {
+        "oid": "ca8def2904fe6cbbe11fcb6cb2c7ecaed420afdf"
+      }
     },
     {
       "number": 131,
@@ -9903,7 +10550,16 @@
           "updatedAt": "2020-04-13T20:31:34Z",
           "comments": []
         }
-      ]
+      ],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "master",
+      "baseRefOid": "db3e29b4e108a3c13fa7ec6e88ba56e391541b87",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "bemasc-hint",
+      "headRefOid": "a448658375b60947252e7cade771889f24c6ee51",
+      "mergeCommit": {
+        "oid": "062727fb72474524a50dbc21ae3815b0798a4b98"
+      }
     },
     {
       "number": 137,
@@ -9922,7 +10578,14 @@
       "mergedAt": null,
       "mergedBy": null,
       "comments": [],
-      "reviews": []
+      "reviews": [],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "master",
+      "baseRefOid": "c4ca7f85fe3c45bcf837430e5cb148d5831881e8",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "bemasc-correction",
+      "headRefOid": "9c928e9b7473d1e58bf3df770ec559155528b052",
+      "mergeCommit": null
     },
     {
       "number": 139,
@@ -9949,7 +10612,16 @@
           "updatedAt": "2020-04-21T03:02:56Z"
         }
       ],
-      "reviews": []
+      "reviews": [],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "master",
+      "baseRefOid": "c4ca7f85fe3c45bcf837430e5cb148d5831881e8",
+      "headRepository": "moonshiner/dns-alt-svc",
+      "headRefName": "tjw-fix-abnf",
+      "headRefOid": "18b57fd64fef24f20e4aa06f6ac2ff630b39d783",
+      "mergeCommit": {
+        "oid": "bfecec9cc95729cae973d57a89705560e7622544"
+      }
     },
     {
       "number": 140,
@@ -9997,7 +10669,16 @@
           "updatedAt": "2020-05-01T14:18:27Z"
         }
       ],
-      "reviews": []
+      "reviews": [],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "master",
+      "baseRefOid": "bfecec9cc95729cae973d57a89705560e7622544",
+      "headRepository": null,
+      "headRefName": "master",
+      "headRefOid": "c69812c542fcdce466717f2f55e6ec0a5966e740",
+      "mergeCommit": {
+        "oid": "f44f60a9abd9a5b33c13ac5709f61f39ad12eb1c"
+      }
     },
     {
       "number": 141,
@@ -10016,7 +10697,14 @@
       "mergedAt": null,
       "mergedBy": null,
       "comments": [],
-      "reviews": []
+      "reviews": [],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "master",
+      "baseRefOid": "f44f60a9abd9a5b33c13ac5709f61f39ad12eb1c",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "bemasc-kv-text",
+      "headRefOid": "45dcf55dd7ab651bd3bd6570c66b3aa6e3be31af",
+      "mergeCommit": null
     },
     {
       "number": 142,
@@ -10035,7 +10723,14 @@
       "mergedAt": null,
       "mergedBy": null,
       "comments": [],
-      "reviews": []
+      "reviews": [],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "master",
+      "baseRefOid": "f44f60a9abd9a5b33c13ac5709f61f39ad12eb1c",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "bemasc-move-examples",
+      "headRefOid": "820ae4a872a3b9fad6702e7cb7b07e24c19707d9",
+      "mergeCommit": null
     },
     {
       "number": 143,
@@ -10054,7 +10749,14 @@
       "mergedAt": null,
       "mergedBy": null,
       "comments": [],
-      "reviews": []
+      "reviews": [],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "master",
+      "baseRefOid": "f44f60a9abd9a5b33c13ac5709f61f39ad12eb1c",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "bemasc-ports",
+      "headRefOid": "51b59550fd743a478c84752d4851717cde28dfa1",
+      "mergeCommit": null
     },
     {
       "number": 144,
@@ -10081,6 +10783,272 @@
           "updatedAt": "2020-05-01T16:02:57Z"
         }
       ],
+      "reviews": [],
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "master",
+      "baseRefOid": "f44f60a9abd9a5b33c13ac5709f61f39ad12eb1c",
+      "headRepository": null,
+      "headRefName": "patch-1",
+      "headRefOid": "e4137f4c645ef9b6dec1714ae8b22fcbdbcc4fea",
+      "mergeCommit": {
+        "oid": "366586190d9ea7b00296e54ca3741f5dadde6d52"
+      }
+    },
+    {
+      "number": 145,
+      "id": "MDExOlB1bGxSZXF1ZXN0NDEyNTE1NTE3",
+      "title": "Add some text clarifying echoconfig parameter usage.",
+      "url": "https://github.com/MikeBishop/dns-alt-svc/pull/145",
+      "state": "OPEN",
+      "author": "chris-wood",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "cc @bemasc ",
+      "createdAt": "2020-05-02T22:15:19Z",
+      "updatedAt": "2020-05-06T19:09:19Z",
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "bemasc-echo",
+      "baseRefOid": "ca8def2904fe6cbbe11fcb6cb2c7ecaed420afdf",
+      "headRepository": "chris-wood/dns-alt-svc",
+      "headRefName": "caw/echo-extension-guidance",
+      "headRefOid": "9e57f8d71c69bf8f45b01192d79f67eb73c401dd",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDA0NTY2ODM4",
+          "commit": {
+            "abbreviatedOid": "dd22a88"
+          },
+          "author": "bemasc",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-02T23:00:28Z",
+          "updatedAt": "2020-05-02T23:04:48Z",
+          "comments": [
+            {
+              "originalPosition": 7,
+              "body": "```suggestion\r\nextensions. That extension mechanism SHOULD NOT be used for any parameter that\r\n```",
+              "createdAt": "2020-05-02T23:00:29Z",
+              "updatedAt": "2020-05-04T17:17:58Z"
+            },
+            {
+              "originalPosition": 9,
+              "body": "```suggestion\r\nother than \"echoconfig\" which affects the TLS ClientHello is directed at the\r\n```",
+              "createdAt": "2020-05-02T23:00:52Z",
+              "updatedAt": "2020-05-04T17:17:58Z"
+            },
+            {
+              "originalPosition": 8,
+              "body": "I think \"connection properties\" is not clear enough.  To me, the only way an ECHOConfig extension could not affect \"connection properties\" would be if it were ignored.",
+              "createdAt": "2020-05-02T23:04:05Z",
+              "updatedAt": "2020-05-04T17:17:58Z"
+            },
+            {
+              "originalPosition": 9,
+              "body": "```suggestion\r\nother than \"echoconfig\" that affects the TLS ClientHello is directed at the\r\n```",
+              "createdAt": "2020-05-02T23:04:36Z",
+              "updatedAt": "2020-05-04T17:17:58Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDA1MDY3NDI3",
+          "commit": {
+            "abbreviatedOid": "a7d68ef"
+          },
+          "author": "chris-wood",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-04T14:56:14Z",
+          "updatedAt": "2020-05-04T14:56:14Z",
+          "comments": [
+            {
+              "originalPosition": 8,
+              "body": "That may be true. How might you rephrase this?",
+              "createdAt": "2020-05-04T14:56:14Z",
+              "updatedAt": "2020-05-04T17:17:58Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDA1MDg5NDU0",
+          "commit": {
+            "abbreviatedOid": "523d497"
+          },
+          "author": "chris-wood",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-04T15:20:02Z",
+          "updatedAt": "2020-05-04T15:20:03Z",
+          "comments": [
+            {
+              "originalPosition": 8,
+              "body": "I took a stab at refactoring this. What do you think?",
+              "createdAt": "2020-05-04T15:20:02Z",
+              "updatedAt": "2020-05-04T17:17:58Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDA1MTgwNjUz",
+          "commit": {
+            "abbreviatedOid": "523d497"
+          },
+          "author": "bemasc",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-04T17:08:33Z",
+          "updatedAt": "2020-05-04T17:11:34Z",
+          "comments": [
+            {
+              "originalPosition": 4,
+              "body": "```suggestion\r\nThe value of this parameter and any included ECHOConfig extensions are directed\r\n```",
+              "createdAt": "2020-05-04T17:08:33Z",
+              "updatedAt": "2020-05-04T17:17:58Z"
+            },
+            {
+              "originalPosition": 7,
+              "body": "```suggestion\r\nClientHello when ECHO is in use SHOULD use other SVCB parameters, and any other\r\nrelevant SVCB parameters SHALL be applied to the inner ClientHello.\r\n```",
+              "createdAt": "2020-05-04T17:10:42Z",
+              "updatedAt": "2020-05-04T17:17:58Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDA1MTg3ODkw",
+          "commit": {
+            "abbreviatedOid": "9e57f8d"
+          },
+          "author": "chris-wood",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-04T17:18:20Z",
+          "updatedAt": "2020-05-04T17:18:21Z",
+          "comments": [
+            {
+              "originalPosition": 7,
+              "body": "I'd prefer to keep these separate sentences.",
+              "createdAt": "2020-05-04T17:18:20Z",
+              "updatedAt": "2020-05-04T17:18:21Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDA1MTkwMzI2",
+          "commit": {
+            "abbreviatedOid": "9e57f8d"
+          },
+          "author": "bemasc",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-04T17:21:34Z",
+          "updatedAt": "2020-05-04T17:21:35Z",
+          "comments": [
+            {
+              "originalPosition": 7,
+              "body": "That's fine with me, but I do think we ought to mention the second requirement somewhere in this draft.   (Currently it's only in the ECHO draft.)",
+              "createdAt": "2020-05-04T17:21:34Z",
+              "updatedAt": "2020-05-04T17:21:35Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDA1MTk0NjUw",
+          "commit": {
+            "abbreviatedOid": "9e57f8d"
+          },
+          "author": "chris-wood",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-04T17:27:19Z",
+          "updatedAt": "2020-05-04T17:27:19Z",
+          "comments": [
+            {
+              "originalPosition": 7,
+              "body": "\ud83d\udc4d Do you want to merge and then make that change? (This PR targets your ESNI->ECHO branch.)",
+              "createdAt": "2020-05-04T17:27:19Z",
+              "updatedAt": "2020-05-04T17:27:19Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDA1MjAzNTAw",
+          "commit": {
+            "abbreviatedOid": "9e57f8d"
+          },
+          "author": "bemasc",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-04T17:39:16Z",
+          "updatedAt": "2020-05-04T17:39:16Z",
+          "comments": [
+            {
+              "originalPosition": 7,
+              "body": "I think it's time for another round of review with the other coauthors.",
+              "createdAt": "2020-05-04T17:39:16Z",
+              "updatedAt": "2020-05-04T17:39:16Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDA2OTA4NTY2",
+          "commit": {
+            "abbreviatedOid": "9e57f8d"
+          },
+          "author": "chris-wood",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-06T19:09:18Z",
+          "updatedAt": "2020-05-06T19:09:19Z",
+          "comments": [
+            {
+              "originalPosition": 7,
+              "body": "Calling @MikeBishop and @enygren!",
+              "createdAt": "2020-05-06T19:09:19Z",
+              "updatedAt": "2020-05-06T19:09:19Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 146,
+      "id": "MDExOlB1bGxSZXF1ZXN0NDE0NDA2Mzgz",
+      "title": "Clarify reference to a default protocol",
+      "url": "https://github.com/MikeBishop/dns-alt-svc/pull/146",
+      "state": "OPEN",
+      "author": "bemasc",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2020-05-07T01:03:11Z",
+      "updatedAt": "2020-05-07T01:03:11Z",
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "master",
+      "baseRefOid": "366586190d9ea7b00296e54ca3741f5dadde6d52",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "bemasc-tls-tcp",
+      "headRefOid": "189657499b12b39c416efa374ff0e40f8b22c6f1",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
       "reviews": []
     }
   ]
