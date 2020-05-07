@@ -956,8 +956,8 @@ Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
 4.3.  General requirements
 
-   All DNS servers SHOULD treat the SvcParam portion of the SVCB RR as
-   opaque and SHOULD NOT try to alter their behavior based on its
+   All DNS servers SHOULD treat the SvcFieldValue portion of the SVCB RR
+   as opaque and SHOULD NOT try to alter their behavior based on its
    contents.
 
    When responding to a query that includes the DNSSEC OK bit
