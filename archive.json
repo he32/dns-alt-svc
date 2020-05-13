@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2020-05-07T19:53:16.592372+00:00",
+  "timestamp": "2020-05-13T02:16:17.862719+00:00",
   "repo": "MikeBishop/dns-alt-svc",
   "labels": [
     {
@@ -10582,26 +10582,42 @@
       "id": "MDExOlB1bGxSZXF1ZXN0NDA2MzEzODM5",
       "title": "Fix textual error: SvcParam -> SvcFieldValue",
       "url": "https://github.com/MikeBishop/dns-alt-svc/pull/137",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "bemasc",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2020-04-20T21:31:31Z",
-      "updatedAt": "2020-04-20T21:31:32Z",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "comments": [],
-      "reviews": [],
+      "updatedAt": "2020-05-07T21:00:25Z",
       "baseRepository": "MikeBishop/dns-alt-svc",
       "baseRefName": "master",
       "baseRefOid": "c4ca7f85fe3c45bcf837430e5cb148d5831881e8",
       "headRepository": "MikeBishop/dns-alt-svc",
       "headRefName": "bemasc-correction",
       "headRefOid": "9c928e9b7473d1e58bf3df770ec559155528b052",
-      "mergeCommit": null
+      "closedAt": "2020-05-07T21:00:25Z",
+      "mergedAt": "2020-05-07T21:00:25Z",
+      "mergedBy": "enygren",
+      "mergeCommit": {
+        "oid": "b33e43e0640829e0c6491ff06e61598da00a8ede"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDA3ODMyOTM4",
+          "commit": {
+            "abbreviatedOid": "9c928e9"
+          },
+          "author": "enygren",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2020-05-07T21:00:20Z",
+          "updatedAt": "2020-05-07T21:00:20Z",
+          "comments": []
+        }
+      ]
     },
     {
       "number": 139,
@@ -10708,19 +10724,40 @@
       "labels": [],
       "body": "Fixes #136",
       "createdAt": "2020-04-30T19:56:58Z",
-      "updatedAt": "2020-04-30T19:56:58Z",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "comments": [],
-      "reviews": [],
+      "updatedAt": "2020-05-07T20:58:22Z",
       "baseRepository": "MikeBishop/dns-alt-svc",
       "baseRefName": "master",
       "baseRefOid": "f44f60a9abd9a5b33c13ac5709f61f39ad12eb1c",
       "headRepository": "MikeBishop/dns-alt-svc",
       "headRefName": "bemasc-kv-text",
       "headRefOid": "45dcf55dd7ab651bd3bd6570c66b3aa6e3be31af",
-      "mergeCommit": null
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDA3ODMwODk2",
+          "commit": {
+            "abbreviatedOid": "45dcf55"
+          },
+          "author": "enygren",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "Looks good other than the comment above about comma nesting being confusing.",
+          "createdAt": "2020-05-07T20:57:21Z",
+          "updatedAt": "2020-05-07T20:58:22Z",
+          "comments": [
+            {
+              "originalPosition": 11,
+              "body": "The number of commas here is confusing.  Is there a way to reword this?\r\n\"When the value is omitted, or both the value and the \"=\" are omittied\", then the presentation value is the empty string.\"",
+              "createdAt": "2020-05-07T20:57:21Z",
+              "updatedAt": "2020-05-07T20:58:22Z"
+            }
+          ]
+        }
+      ]
     },
     {
       "number": 142,
@@ -10760,19 +10797,33 @@
       "labels": [],
       "body": "Fixes #134",
       "createdAt": "2020-04-30T20:11:48Z",
-      "updatedAt": "2020-04-30T20:11:48Z",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "comments": [],
-      "reviews": [],
+      "updatedAt": "2020-05-07T19:56:08Z",
       "baseRepository": "MikeBishop/dns-alt-svc",
       "baseRefName": "master",
       "baseRefOid": "f44f60a9abd9a5b33c13ac5709f61f39ad12eb1c",
       "headRepository": "MikeBishop/dns-alt-svc",
       "headRefName": "bemasc-ports",
       "headRefOid": "51b59550fd743a478c84752d4851717cde28dfa1",
-      "mergeCommit": null
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDA3Nzg5MTA0",
+          "commit": {
+            "abbreviatedOid": "51b5955"
+          },
+          "author": "enygren",
+          "authorAssociation": "COLLABORATOR",
+          "state": "CHANGES_REQUESTED",
+          "body": "Maybe:\r\n\"If port-restricting firewalls are in place between some client and the service\r\nendpoint, changing the port number can cause those clients to lose access to the service, so operators should exercise caution when using this SvcParamKey with non-default ports.\"\r\n?",
+          "createdAt": "2020-05-07T19:54:17Z",
+          "updatedAt": "2020-05-07T19:56:08Z",
+          "comments": []
+        }
+      ]
     },
     {
       "number": 144,
@@ -10822,7 +10873,7 @@
       "labels": [],
       "body": "cc @bemasc ",
       "createdAt": "2020-05-02T22:15:19Z",
-      "updatedAt": "2020-05-07T14:49:24Z",
+      "updatedAt": "2020-05-13T00:09:04Z",
       "baseRepository": "MikeBishop/dns-alt-svc",
       "baseRefName": "bemasc-echo",
       "baseRefOid": "ca8def2904fe6cbbe11fcb6cb2c7ecaed420afdf",
@@ -11116,6 +11167,46 @@
               "body": "Lovely -- thanks!",
               "createdAt": "2020-05-07T14:49:20Z",
               "updatedAt": "2020-05-07T14:49:24Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDA3ODI3OTAz",
+          "commit": {
+            "abbreviatedOid": "972c053"
+          },
+          "author": "enygren",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-07T20:52:53Z",
+          "updatedAt": "2020-05-07T20:52:54Z",
+          "comments": [
+            {
+              "originalPosition": 7,
+              "body": "The wording \"are directed at\" tripped me up a few times when first reading this.  I wonder if \"influence the construction of\" or similar might be more readable? \r\n\r\nWould giving an illustrative example help for people not as familiar with ECHO?  (\"For example, the echoconfig will specify the SNI and ALPN values to use in ClientHelloOuter but will have no impact on the SNI and ALPN values used in ClientHelloInner.\")",
+              "createdAt": "2020-05-07T20:52:53Z",
+              "updatedAt": "2020-05-07T20:52:54Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDEwNTA0ODA4",
+          "commit": {
+            "abbreviatedOid": "972c053"
+          },
+          "author": "chris-wood",
+          "authorAssociation": "CONTRIBUTOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-13T00:09:04Z",
+          "updatedAt": "2020-05-13T00:09:04Z",
+          "comments": [
+            {
+              "originalPosition": 7,
+              "body": "> The wording \"are directed at\" tripped me up a few times when first reading this. I wonder if \"influence the construction of\" or similar might be more readable?\r\n\r\nThat's a great suggestion. We should incorporate it.\r\n\r\n> Would giving an illustrative example help for people not as familiar with ECHO? \r\n\r\nProbably! @bemasc, do you want to take a crack at that? (I won't have time to get back to this PR for quite a while, I'm afraid.)",
+              "createdAt": "2020-05-13T00:09:04Z",
+              "updatedAt": "2020-05-13T00:09:04Z"
             }
           ]
         }
