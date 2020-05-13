@@ -170,9 +170,11 @@ Schwartz, et al.        Expires 14 November 2020                [Page 3]
 Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
 
+     A.4.  Comparison with separate RR types for AliasForm and
+           ServiceForm . . . . . . . . . . . . . . . . . . . . . . .  35
    Appendix B.  Design Considerations and Open Issues  . . . . . . .  35
-     B.1.  Record Name . . . . . . . . . . . . . . . . . . . . . . .  35
-     B.2.  Generality  . . . . . . . . . . . . . . . . . . . . . . .  35
+     B.1.  Record Name . . . . . . . . . . . . . . . . . . . . . . .  36
+     B.2.  Generality  . . . . . . . . . . . . . . . . . . . . . . .  36
      B.3.  Wire Format . . . . . . . . . . . . . . . . . . . . . . .  36
      B.4.  Whether to include Weight . . . . . . . . . . . . . . . .  36
    Appendix C.  Change history . . . . . . . . . . . . . . . . . . .  36
@@ -219,8 +221,6 @@ Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
 
 
-
-
 Schwartz, et al.        Expires 14 November 2020                [Page 4]
 
 Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
@@ -257,19 +257,19 @@ Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
    simple.example. 300 IN A    192.0.2.1
                           AAAA 2001:db8::1
 
-   The domain owner could add a record like
+   The domain owner could add this record
 
    simple.example. 7200 IN HTTPSSVC 1 . alpn=h3 ...
 
-   The presence of this record indicates to clients that simple.example
-   supports HTTPS, and the key=value pairs indicate that it supports
-   QUIC in addition to HTTPS over TCP (an implicit default).  The record
-   could also include other information (e.g. non-standard port, ECHO
+   to indicate that simple.example uses HTTPS, and supports QUIC in
+   addition to HTTPS over TCP (an implicit default).  The record could
+   also include other information (e.g. non-standard port, ECHO
    configuration).
 
 1.2.  Example: Apex aliasing
 
    Consider a zone that is using CNAME aliasing:
+
 
 
 
@@ -674,16 +674,20 @@ Schwartz, et al.        Expires 14 November 2020               [Page 12]
 Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
 
-   As an example:
+   As an example, the owner of example.com could publish this record
 
    _8443._foo.api.example.com. 7200 IN SVCB 0 svc4.example.net.
+
+   to indicate that "foo://api.example.com:8443" is aliased to
+   "svc4.example.net".  The owner of example.net, in turn, could publish
+   this record
+
    svc4.example.net.  7200  IN SVCB 3 svc4.example.net. (
        alpn="bar" port="8004" echoconfig="..." )
 
-   would indicate that "foo://api.example.com:8443" is aliased to the
-   service endpoints offered at "svc4.example.net" on port number 8004,
-   which support the protocol "bar" and its associated transport in
-   addition to the default transport protocol for "foo://".
+   to indicate that these services are served on port number 8004, which
+   supports the protocol "bar" and its associated transport in addition
+   to the default transport protocol for "foo://".
 
    (Parentheses are used to ignore a line break ([RFC1035]
    Section 5.1).)
@@ -718,10 +722,6 @@ Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
    SVCB record, address (AAAA and/or A) records, or both address records
    and a ServiceForm SVCB record.
 
-   Note that the SVCB record's owner name MAY be the canonical name of a
-   CNAME record, and the SvcDomainName MAY be the owner of a CNAME
-   record.  Clients and recursive resolvers MUST follow CNAMEs as
-   normal.
 
 
 
@@ -729,6 +729,11 @@ Schwartz, et al.        Expires 14 November 2020               [Page 13]
 
 Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
+
+   Note that the SVCB record's owner name MAY be the canonical name of a
+   CNAME record, and the SvcDomainName MAY be the owner of a CNAME
+   record.  Clients and recursive resolvers MUST follow CNAMEs as
+   normal.
 
    Due to the risk of loops, clients and recursive resolvers MUST
    implement loop detection.  Chains of consecutive SVCB and CNAME
@@ -773,11 +778,6 @@ Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
    svc2.example.net. 7200  IN HTTPSSVC 1 . port=8002 echoconfig="..."
    svc2.example.net. 300   IN A        192.0.2.2
    svc2.example.net. 300   IN AAAA     2001:db8::2
-
-
-
-
-
 
 
 
@@ -1930,11 +1930,37 @@ A.3.  Differences from the proposed ANAME record
    endpoint, and may remove the apex's address records if the observed
    legacy traffic has fallen to negligible levels.
 
+A.4.  Comparison with separate RR types for AliasForm and ServiceForm
+
+   Abstractly, functions of AliasForm and ServiceForm are independent,
+   so it might be tempting to specify them as separate RR types.
+   However, this would result in a serious performance impairment,
+   because clients cannot rely on their recursive resolver to follow
+   SVCB aliases (unlike CNAME).  Thus, clients would have to issue
+   queries for both RR types in parallel, potentially at each step of
+   the alias chain.  Recursive resolvers that implement the
+   specification would, upon receipt of a ServiceForm query, emit both a
+   ServiceForm and an AliasForm query to the authoritative.  Thus,
+   splitting the RR type would double, or in some cases triple, the load
+   on clients and servers, and would not reduce implementation
+   complexity.
+
 Appendix B.  Design Considerations and Open Issues
 
    This draft is intended to be a work-in-progress for discussion.  Many
    details are expected to change with subsequent refinement.  Some
    known issues or topics for discussion are listed below.
+
+
+
+
+
+
+
+Schwartz, et al.        Expires 14 November 2020               [Page 35]
+
+Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
+
 
 B.1.  Record Name
 
@@ -1950,17 +1976,6 @@ B.2.  Generality
    than HTTP.  Past efforts to over-generalize have not met with broad
    success, but we hope that HTTPSSVC and SVCB have struck an acceptable
    balance between generality and focus.
-
-
-
-
-
-
-
-Schwartz, et al.        Expires 14 November 2020               [Page 35]
-
-Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
-
 
 B.3.  Wire Format
 
@@ -1996,6 +2011,13 @@ Appendix C.  Change history
       -  Generalize to an SVCB record, with special-case handling for
          Alt-Svc and HTTPS separated out to dedicated sections.
 
+
+
+Schwartz, et al.        Expires 14 November 2020               [Page 36]
+
+Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
+
+
       -  Split out a separate HTTPSSVC record for the HTTPS use-case.
 
       -  Remove the explicit SvcRecordType=0/1 and instead make the
@@ -2010,13 +2032,6 @@ Appendix C.  Change history
          reduce ambiguities.
 
    *  draft-nygren-httpbis-httpssvc-02
-
-
-
-Schwartz, et al.        Expires 14 November 2020               [Page 36]
-
-Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
-
 
       -  Remove the redundant length fields from the wire format.
 
@@ -2051,6 +2066,14 @@ Authors' Addresses
    Erik Nygren
    Akamai Technologies
 
+
+
+
+Schwartz, et al.        Expires 14 November 2020               [Page 37]
+
+Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
+
+
    Email: erik+ietf@nygren.org
 
 
@@ -2069,4 +2092,37 @@ Authors' Addresses
 
 
 
-Schwartz, et al.        Expires 14 November 2020               [Page 37]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Schwartz, et al.        Expires 14 November 2020               [Page 38]
