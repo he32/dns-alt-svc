@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2020-05-13T02:16:17.862719+00:00",
+  "timestamp": "2020-05-14T00:44:43.901559+00:00",
   "repo": "MikeBishop/dns-alt-svc",
   "labels": [
     {
@@ -2298,15 +2298,15 @@
       "id": "MDU6SXNzdWU1OTk2MTYyMzU=",
       "title": "Add warning about using non-default ports",
       "url": "https://github.com/MikeBishop/dns-alt-svc/issues/134",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "enygren",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "Paul Vixie recommends we add a warning that operators should avoid using non-default ports for general Internet use.  Non-default ports may be firewalled in client networks, so may appear to work in testing but may not work for some clients/users.",
       "createdAt": "2020-04-14T14:28:04Z",
-      "updatedAt": "2020-04-14T14:28:04Z",
-      "closedAt": null,
+      "updatedAt": "2020-05-13T03:53:50Z",
+      "closedAt": "2020-05-13T03:53:50Z",
       "comments": []
     },
     {
@@ -2338,15 +2338,15 @@
       "id": "MDU6SXNzdWU2MDM1NDY3ODg=",
       "title": "Clarify presentation format section",
       "url": "https://github.com/MikeBishop/dns-alt-svc/issues/136",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "bemasc",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "The wording about key=value syntax is confusing.  It could be clearer, e.g.\r\n>    The presentation format for SvcFieldValue is a whitespace-separated list of\r\n> \u00a0 \u00a0key=value pairs (e.g. \"key123=value1 keys456=value2\"). When the value, or\r\n> \u00a0 \u00a0both the value and the \"=\" are omitted, the value should be interpreted as\r\n> \u00a0 \u00a0being empty.",
       "createdAt": "2020-04-20T21:27:21Z",
-      "updatedAt": "2020-04-20T21:28:17Z",
-      "closedAt": null,
+      "updatedAt": "2020-05-13T03:51:37Z",
+      "closedAt": "2020-05-13T03:51:37Z",
       "comments": [
         {
           "author": "bemasc",
@@ -2401,6 +2401,22 @@
       "body": "",
       "createdAt": "2020-05-07T01:18:05Z",
       "updatedAt": "2020-05-07T01:18:05Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 149,
+      "id": "MDU6SXNzdWU2MTc3NzA2Njk=",
+      "title": "Question about connection reuse",
+      "url": "https://github.com/MikeBishop/dns-alt-svc/issues/149",
+      "state": "OPEN",
+      "author": "ddragana",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "This is an example:\r\nThere are this 2 records for eampleA.com and exampleB.com:\r\nexampleA.com.  7200  IN HTTPSSVC  1 examples.com alpn=h2,h3 esniconfig=\"...\"\r\n\r\nexampleB.com.  7200  IN HTTPSSVC  1 examples.com alpn=h2,h3 esniconfig=\"...\"\r\n\r\nthey map to the same SvcDomainName.\r\nexamplea.com is requested first and there is already established connection to examples.com using sni examplea.com.\r\nNow request for exampleb.com should be made. The request cannot use already existing connection to examples.com unless it is permitted by Origin frame (RFC8336) or Section 9.1.1. in RFC7540 (this is not part of this spec)\r\nA connection can be reused only if ClientHello has not been send yet.\r\nI think this is a correct behavior. Maybe the spec should be more descriptive in Section \"Optimistic pre-connection and connection reuse\". There is this line:\r\n\r\n> If an SVCB record is consistent with an active or in-progress connection C\r\n\r\n`active` is not defining the needed state well, maybe it should be better define for HTTPSSVC case specifically.",
+      "createdAt": "2020-05-13T21:36:14Z",
+      "updatedAt": "2020-05-13T21:36:14Z",
       "closedAt": null,
       "comments": []
     }
@@ -10327,17 +10343,26 @@
       "id": "MDExOlB1bGxSZXF1ZXN0Mzg2NzIzNzQ2",
       "title": "Change \"ESNI\" to \"ECHO\" to match tls-esni-06",
       "url": "https://github.com/MikeBishop/dns-alt-svc/pull/127",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "bemasc",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "",
       "createdAt": "2020-03-11T14:28:53Z",
-      "updatedAt": "2020-04-30T02:23:58Z",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
+      "updatedAt": "2020-05-13T03:50:50Z",
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "master",
+      "baseRefOid": "b33e43e0640829e0c6491ff06e61598da00a8ede",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "bemasc-echo",
+      "headRefOid": "b0fdcad8400fa7381e55e5b13471b50eea859e30",
+      "closedAt": "2020-05-13T03:50:50Z",
+      "mergedAt": "2020-05-13T03:50:50Z",
+      "mergedBy": "enygren",
+      "mergeCommit": {
+        "oid": "65ab9f5c91b53c31a046a16c36b9381d4315d3bd"
+      },
       "comments": [
         {
           "author": "bemasc",
@@ -10364,7 +10389,7 @@
               "originalPosition": 75,
               "body": "ECHO uses `ECHOConfig` to carry this data -- should we do the same here?",
               "createdAt": "2020-03-12T13:21:12Z",
-              "updatedAt": "2020-04-14T03:25:27Z"
+              "updatedAt": "2020-05-13T02:19:41Z"
             }
           ]
         },
@@ -10384,7 +10409,7 @@
               "originalPosition": 75,
               "body": "Given \"echo\" has other meetings, that's probably a good plan. \"echoconfig\" is a hair longer but a more unique string.",
               "createdAt": "2020-03-12T14:15:53Z",
-              "updatedAt": "2020-04-14T03:25:27Z"
+              "updatedAt": "2020-05-13T02:19:41Z"
             }
           ]
         },
@@ -10404,7 +10429,7 @@
               "originalPosition": 75,
               "body": "Done",
               "createdAt": "2020-03-12T19:44:44Z",
-              "updatedAt": "2020-04-14T03:25:27Z"
+              "updatedAt": "2020-05-13T02:19:41Z"
             }
           ]
         },
@@ -10420,15 +10445,21 @@
           "createdAt": "2020-04-13T20:47:34Z",
           "updatedAt": "2020-04-13T20:47:34Z",
           "comments": []
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDEwNTY5MTMy",
+          "commit": {
+            "abbreviatedOid": "b0fdcad"
+          },
+          "author": "enygren",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "Merging now and we can update if ECHO gets renamed.",
+          "createdAt": "2020-05-13T03:50:44Z",
+          "updatedAt": "2020-05-13T03:50:44Z",
+          "comments": []
         }
-      ],
-      "baseRepository": "MikeBishop/dns-alt-svc",
-      "baseRefName": "master",
-      "baseRefOid": "db3e29b4e108a3c13fa7ec6e88ba56e391541b87",
-      "headRepository": "MikeBishop/dns-alt-svc",
-      "headRefName": "bemasc-echo",
-      "headRefOid": "ca8def2904fe6cbbe11fcb6cb2c7ecaed420afdf",
-      "mergeCommit": null
+      ]
     },
     {
       "number": 128,
@@ -10717,24 +10748,26 @@
       "id": "MDExOlB1bGxSZXF1ZXN0NDExODA0OTI2",
       "title": "Clarifications to the key-value definition text",
       "url": "https://github.com/MikeBishop/dns-alt-svc/pull/141",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "bemasc",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "Fixes #136",
       "createdAt": "2020-04-30T19:56:58Z",
-      "updatedAt": "2020-05-07T20:58:22Z",
+      "updatedAt": "2020-05-13T03:51:37Z",
       "baseRepository": "MikeBishop/dns-alt-svc",
       "baseRefName": "master",
       "baseRefOid": "f44f60a9abd9a5b33c13ac5709f61f39ad12eb1c",
       "headRepository": "MikeBishop/dns-alt-svc",
       "headRefName": "bemasc-kv-text",
-      "headRefOid": "45dcf55dd7ab651bd3bd6570c66b3aa6e3be31af",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "e573f8f2eea555cbad86c9e223bcee3d2bef80c6",
+      "closedAt": "2020-05-13T03:51:37Z",
+      "mergedAt": "2020-05-13T03:51:37Z",
+      "mergedBy": "enygren",
+      "mergeCommit": {
+        "oid": "011c37ccc3b15331c0ef353ddf1702f45a324a59"
+      },
       "comments": [],
       "reviews": [
         {
@@ -10753,9 +10786,42 @@
               "originalPosition": 11,
               "body": "The number of commas here is confusing.  Is there a way to reword this?\r\n\"When the value is omitted, or both the value and the \"=\" are omittied\", then the presentation value is the empty string.\"",
               "createdAt": "2020-05-07T20:57:21Z",
-              "updatedAt": "2020-05-07T20:58:22Z"
+              "updatedAt": "2020-05-13T03:31:59Z"
             }
           ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDEwNTY0MDM1",
+          "commit": {
+            "abbreviatedOid": "e573f8f"
+          },
+          "author": "bemasc",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-13T03:32:10Z",
+          "updatedAt": "2020-05-13T03:32:11Z",
+          "comments": [
+            {
+              "originalPosition": 11,
+              "body": "Done",
+              "createdAt": "2020-05-13T03:32:10Z",
+              "updatedAt": "2020-05-13T03:32:11Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDEwNTY5MzU4",
+          "commit": {
+            "abbreviatedOid": "e573f8f"
+          },
+          "author": "enygren",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2020-05-13T03:51:31Z",
+          "updatedAt": "2020-05-13T03:51:31Z",
+          "comments": []
         }
       ]
     },
@@ -10771,44 +10837,62 @@
       "labels": [],
       "body": "This has been requested by multiple reviewers.\r\n\r\nFixes #135",
       "createdAt": "2020-04-30T20:06:53Z",
-      "updatedAt": "2020-04-30T20:06:53Z",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "comments": [],
-      "reviews": [],
+      "updatedAt": "2020-05-13T03:58:56Z",
       "baseRepository": "MikeBishop/dns-alt-svc",
       "baseRefName": "master",
       "baseRefOid": "f44f60a9abd9a5b33c13ac5709f61f39ad12eb1c",
       "headRepository": "MikeBishop/dns-alt-svc",
       "headRefName": "bemasc-move-examples",
       "headRefOid": "820ae4a872a3b9fad6702e7cb7b07e24c19707d9",
-      "mergeCommit": null
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [
+        {
+          "author": "enygren",
+          "authorAssociation": "COLLABORATOR",
+          "body": "(I'll let you resolve conflicts on this one first since it may be easier to delete and re-do than safely resolve?)",
+          "createdAt": "2020-05-13T03:58:56Z",
+          "updatedAt": "2020-05-13T03:58:56Z"
+        }
+      ],
+      "reviews": []
     },
     {
       "number": 143,
       "id": "MDExOlB1bGxSZXF1ZXN0NDExODExMjEx",
       "title": "Add warning text about non-default ports",
       "url": "https://github.com/MikeBishop/dns-alt-svc/pull/143",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "bemasc",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "Fixes #134",
       "createdAt": "2020-04-30T20:11:48Z",
-      "updatedAt": "2020-05-07T19:56:08Z",
+      "updatedAt": "2020-05-13T03:53:50Z",
       "baseRepository": "MikeBishop/dns-alt-svc",
       "baseRefName": "master",
-      "baseRefOid": "f44f60a9abd9a5b33c13ac5709f61f39ad12eb1c",
+      "baseRefOid": "011c37ccc3b15331c0ef353ddf1702f45a324a59",
       "headRepository": "MikeBishop/dns-alt-svc",
       "headRefName": "bemasc-ports",
-      "headRefOid": "51b59550fd743a478c84752d4851717cde28dfa1",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
-      "comments": [],
+      "headRefOid": "75621eb607e54b991429c4bdf1d704bf06896746",
+      "closedAt": "2020-05-13T03:53:50Z",
+      "mergedAt": "2020-05-13T03:53:50Z",
+      "mergedBy": "enygren",
+      "mergeCommit": {
+        "oid": "3dab5b9dc61b48877b39e7cd0459b43ca2e91bd0"
+      },
+      "comments": [
+        {
+          "author": "bemasc",
+          "authorAssociation": "COLLABORATOR",
+          "body": "OK, I've adjusted the wording similar to your suggestion",
+          "createdAt": "2020-05-13T03:22:06Z",
+          "updatedAt": "2020-05-13T03:22:06Z"
+        }
+      ],
       "reviews": [
         {
           "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDA3Nzg5MTA0",
@@ -10821,6 +10905,32 @@
           "body": "Maybe:\r\n\"If port-restricting firewalls are in place between some client and the service\r\nendpoint, changing the port number can cause those clients to lose access to the service, so operators should exercise caution when using this SvcParamKey with non-default ports.\"\r\n?",
           "createdAt": "2020-05-07T19:54:17Z",
           "updatedAt": "2020-05-07T19:56:08Z",
+          "comments": []
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDEwNTY5NjI3",
+          "commit": {
+            "abbreviatedOid": "b21d55f"
+          },
+          "author": "enygren",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2020-05-13T03:52:32Z",
+          "updatedAt": "2020-05-13T03:52:32Z",
+          "comments": []
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDEwNTY5OTA4",
+          "commit": {
+            "abbreviatedOid": "75621eb"
+          },
+          "author": "enygren",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2020-05-13T03:53:37Z",
+          "updatedAt": "2020-05-13T03:53:37Z",
           "comments": []
         }
       ]
@@ -10873,10 +10983,10 @@
       "labels": [],
       "body": "cc @bemasc ",
       "createdAt": "2020-05-02T22:15:19Z",
-      "updatedAt": "2020-05-13T00:09:04Z",
+      "updatedAt": "2020-05-13T02:27:23Z",
       "baseRepository": "MikeBishop/dns-alt-svc",
       "baseRefName": "bemasc-echo",
-      "baseRefOid": "ca8def2904fe6cbbe11fcb6cb2c7ecaed420afdf",
+      "baseRefOid": "b0fdcad8400fa7381e55e5b13471b50eea859e30",
       "headRepository": "chris-wood/dns-alt-svc",
       "headRefName": "caw/echo-extension-guidance",
       "headRefOid": "972c053ecca73b1c1fe82814bc6800855f7e547b",
@@ -11209,6 +11319,26 @@
               "updatedAt": "2020-05-13T00:09:04Z"
             }
           ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDEwNTQ1NjAx",
+          "commit": {
+            "abbreviatedOid": "972c053"
+          },
+          "author": "bemasc",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-13T02:27:22Z",
+          "updatedAt": "2020-05-13T02:27:23Z",
+          "comments": [
+            {
+              "originalPosition": 7,
+              "body": "OK, I gave it a try: https://github.com/MikeBishop/dns-alt-svc/pull/148",
+              "createdAt": "2020-05-13T02:27:23Z",
+              "updatedAt": "2020-05-13T02:27:23Z"
+            }
+          ]
         }
       ]
     },
@@ -11251,6 +11381,53 @@
           "createdAt": "2020-05-07T19:52:09Z",
           "updatedAt": "2020-05-07T19:52:09Z",
           "comments": []
+        }
+      ]
+    },
+    {
+      "number": 148,
+      "id": "MDExOlB1bGxSZXF1ZXN0NDE3MDc1MjU0",
+      "title": "Explain inner vs. outer ClientHello",
+      "url": "https://github.com/MikeBishop/dns-alt-svc/pull/148",
+      "state": "OPEN",
+      "author": "bemasc",
+      "authorAssociation": "COLLABORATOR",
+      "assignees": [],
+      "labels": [],
+      "body": "As requested here: https://github.com/MikeBishop/dns-alt-svc/pull/145#discussion_r424102426",
+      "createdAt": "2020-05-13T02:27:00Z",
+      "updatedAt": "2020-05-14T00:44:04Z",
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "bemasc-echo",
+      "baseRefOid": "b0fdcad8400fa7381e55e5b13471b50eea859e30",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "bemasc-echo-guidance",
+      "headRefOid": "ca478f0c944569059988494c1fe29e483fabec7c",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDEwNTcxMTk2",
+          "commit": {
+            "abbreviatedOid": "2fcc1b9"
+          },
+          "author": "enygren",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-13T03:58:20Z",
+          "updatedAt": "2020-05-13T03:58:21Z",
+          "comments": [
+            {
+              "originalPosition": 11,
+              "body": "Do we want to add to the example that the ECHOConfig could specify a dummy ALPN TLS extension for the outer client hello (for middlebox compatibility) but it is ignored for connection establishment?  Similarly, explaining how SNI fits in here might be helpful to readers.  (ie, that the \"outer\" contains a dummy SNI from the ECHOConfig and the \"inner\" contains the SNI from the Origin.) ",
+              "createdAt": "2020-05-13T03:58:20Z",
+              "updatedAt": "2020-05-14T00:44:04Z"
+            }
+          ]
         }
       ]
     }
