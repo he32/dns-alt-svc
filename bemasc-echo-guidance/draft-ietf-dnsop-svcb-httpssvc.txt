@@ -5,9 +5,9 @@
 DNSOP Working Group                                          B. Schwartz
 Internet-Draft                                                    Google
 Intended status: Standards Track                               M. Bishop
-Expires: 14 November 2020                                      E. Nygren
+Expires: 15 November 2020                                      E. Nygren
                                                      Akamai Technologies
-                                                             13 May 2020
+                                                             14 May 2020
 
 
  Service binding and parameter specification via the DNS (DNS SVCB and
@@ -53,7 +53,7 @@ Abstract
 
 
 
-Schwartz, et al.        Expires 14 November 2020                [Page 1]
+Schwartz, et al.        Expires 15 November 2020                [Page 1]
 
 Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
@@ -73,7 +73,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 14 November 2020.
+   This Internet-Draft will expire on 15 November 2020.
 
 Copyright Notice
 
@@ -109,7 +109,7 @@ Table of Contents
 
 
 
-Schwartz, et al.        Expires 14 November 2020                [Page 2]
+Schwartz, et al.        Expires 15 November 2020                [Page 2]
 
 Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
@@ -148,7 +148,7 @@ Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
      8.1.  Client behavior . . . . . . . . . . . . . . . . . . . . .  26
      8.2.  Deployment considerations . . . . . . . . . . . . . . . .  27
    9.  Interaction with other standards  . . . . . . . . . . . . . .  27
-   10. Security Considerations . . . . . . . . . . . . . . . . . . .  27
+   10. Security Considerations . . . . . . . . . . . . . . . . . . .  28
    11. IANA Considerations . . . . . . . . . . . . . . . . . . . . .  28
      11.1.  New registry for Service Parameters  . . . . . . . . . .  28
        11.1.1.  Procedure  . . . . . . . . . . . . . . . . . . . . .  28
@@ -165,7 +165,7 @@ Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
 
 
-Schwartz, et al.        Expires 14 November 2020                [Page 3]
+Schwartz, et al.        Expires 15 November 2020                [Page 3]
 
 Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
@@ -221,7 +221,7 @@ Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
 
 
-Schwartz, et al.        Expires 14 November 2020                [Page 4]
+Schwartz, et al.        Expires 15 November 2020                [Page 4]
 
 Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
@@ -277,7 +277,7 @@ Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
 
 
-Schwartz, et al.        Expires 14 November 2020                [Page 5]
+Schwartz, et al.        Expires 15 November 2020                [Page 5]
 
 Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
@@ -333,7 +333,7 @@ Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
 
 
-Schwartz, et al.        Expires 14 November 2020                [Page 6]
+Schwartz, et al.        Expires 15 November 2020                [Page 6]
 
 Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
@@ -389,7 +389,7 @@ Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
 
 
-Schwartz, et al.        Expires 14 November 2020                [Page 7]
+Schwartz, et al.        Expires 15 November 2020                [Page 7]
 
 Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
@@ -445,7 +445,7 @@ Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
 
 
-Schwartz, et al.        Expires 14 November 2020                [Page 8]
+Schwartz, et al.        Expires 15 November 2020                [Page 8]
 
 Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
@@ -501,7 +501,7 @@ Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
 
 
-Schwartz, et al.        Expires 14 November 2020                [Page 9]
+Schwartz, et al.        Expires 15 November 2020                [Page 9]
 
 Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
@@ -557,7 +557,7 @@ Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
 
 
-Schwartz, et al.        Expires 14 November 2020               [Page 10]
+Schwartz, et al.        Expires 15 November 2020               [Page 10]
 
 Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
@@ -613,7 +613,7 @@ Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
 
 
-Schwartz, et al.        Expires 14 November 2020               [Page 11]
+Schwartz, et al.        Expires 15 November 2020               [Page 11]
 
 Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
@@ -669,7 +669,7 @@ Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
 
 
-Schwartz, et al.        Expires 14 November 2020               [Page 12]
+Schwartz, et al.        Expires 15 November 2020               [Page 12]
 
 Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
@@ -725,7 +725,7 @@ Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
 
 
-Schwartz, et al.        Expires 14 November 2020               [Page 13]
+Schwartz, et al.        Expires 15 November 2020               [Page 13]
 
 Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
@@ -781,7 +781,7 @@ Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
 
 
-Schwartz, et al.        Expires 14 November 2020               [Page 14]
+Schwartz, et al.        Expires 15 November 2020               [Page 14]
 
 Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
@@ -837,7 +837,7 @@ Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
 
 
-Schwartz, et al.        Expires 14 November 2020               [Page 15]
+Schwartz, et al.        Expires 15 November 2020               [Page 15]
 
 Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
@@ -893,7 +893,7 @@ Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
 
 
-Schwartz, et al.        Expires 14 November 2020               [Page 16]
+Schwartz, et al.        Expires 15 November 2020               [Page 16]
 
 Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
@@ -949,7 +949,7 @@ Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
 
 
-Schwartz, et al.        Expires 14 November 2020               [Page 17]
+Schwartz, et al.        Expires 15 November 2020               [Page 17]
 
 Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
@@ -1005,7 +1005,7 @@ Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
 
 
-Schwartz, et al.        Expires 14 November 2020               [Page 18]
+Schwartz, et al.        Expires 15 November 2020               [Page 18]
 
 Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
@@ -1061,7 +1061,7 @@ Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
 
 
-Schwartz, et al.        Expires 14 November 2020               [Page 19]
+Schwartz, et al.        Expires 15 November 2020               [Page 19]
 
 Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
@@ -1117,7 +1117,7 @@ Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
 
 
-Schwartz, et al.        Expires 14 November 2020               [Page 20]
+Schwartz, et al.        Expires 15 November 2020               [Page 20]
 
 Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
@@ -1173,7 +1173,7 @@ Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
 
 
-Schwartz, et al.        Expires 14 November 2020               [Page 21]
+Schwartz, et al.        Expires 15 November 2020               [Page 21]
 
 Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
@@ -1229,7 +1229,7 @@ Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
 
 
-Schwartz, et al.        Expires 14 November 2020               [Page 22]
+Schwartz, et al.        Expires 15 November 2020               [Page 22]
 
 Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
@@ -1285,7 +1285,7 @@ Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
 
 
-Schwartz, et al.        Expires 14 November 2020               [Page 23]
+Schwartz, et al.        Expires 15 November 2020               [Page 23]
 
 Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
@@ -1341,7 +1341,7 @@ Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
 
 
-Schwartz, et al.        Expires 14 November 2020               [Page 24]
+Schwartz, et al.        Expires 15 November 2020               [Page 24]
 
 Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
@@ -1397,7 +1397,7 @@ Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
 
 
-Schwartz, et al.        Expires 14 November 2020               [Page 25]
+Schwartz, et al.        Expires 15 November 2020               [Page 25]
 
 Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
@@ -1434,7 +1434,8 @@ Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
    ClientHello is used for establishing a connection to the service, so
    its contents may be influenced by other SVCB parameters.  For
    example, the requirements on the ProtocolNameList in Section 6.1
-   apply only to the inner ClientHello.
+   apply only to the inner ClientHello.  Similarly, it is the inner
+   ClientHello whose Server Name Indication identifies the origin.
 
 8.1.  Client behavior
 
@@ -1446,17 +1447,21 @@ Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
    ECHO-capable clients SHALL implement the following behavior for
    connection establishment.
 
+
+
+
+
+
+
+Schwartz, et al.        Expires 15 November 2020               [Page 26]
+
+Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
+
+
    1.  Perform connection establishment using HTTPSSVC as described in
        Section 3, but do not fall back to the origin's A/AAAA records.
        If all the HTTPSSVC RRs have an "echoconfig" key, and they all
        fail, terminate connection establishment.
-
-
-
-Schwartz, et al.        Expires 14 November 2020               [Page 26]
-
-Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
-
 
    2.  If the client implements Alt-Svc, try to connect using any
        entries from the Alt-Svc cache.
@@ -1496,6 +1501,19 @@ Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
    entry in the IANA URI Schemes Registry [RFC7595].  The scheme SHOULD
    have a defined specification for use with SVCB.
 
+
+
+
+
+
+
+
+
+Schwartz, et al.        Expires 15 November 2020               [Page 27]
+
+Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
+
+
 10.  Security Considerations
 
    SVCB/HTTPSSVC RRs are intended for distribution over untrusted
@@ -1503,16 +1521,6 @@ Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
    service is authoritative for the origin (similar to Section 2.1 of
    [AltSvc]).  Therefore, DNSSEC signing and validation are OPTIONAL for
    publishing and using SVCB and HTTPSSVC records.
-
-
-
-
-
-
-Schwartz, et al.        Expires 14 November 2020               [Page 27]
-
-Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
-
 
    Clients MUST ensure that their DNS cache is partitioned for each
    local network, or flushed on network changes, to prevent a local
@@ -1557,15 +1565,7 @@ Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
 
 
-
-
-
-
-
-
-
-
-Schwartz, et al.        Expires 14 November 2020               [Page 28]
+Schwartz, et al.        Expires 15 November 2020               [Page 28]
 
 Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
@@ -1621,7 +1621,7 @@ Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
 
 
-Schwartz, et al.        Expires 14 November 2020               [Page 29]
+Schwartz, et al.        Expires 15 November 2020               [Page 29]
 
 Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
@@ -1677,7 +1677,7 @@ Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
 
 
-Schwartz, et al.        Expires 14 November 2020               [Page 30]
+Schwartz, et al.        Expires 15 November 2020               [Page 30]
 
 Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
@@ -1733,7 +1733,7 @@ Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
 
 
-Schwartz, et al.        Expires 14 November 2020               [Page 31]
+Schwartz, et al.        Expires 15 November 2020               [Page 31]
 
 Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
@@ -1789,7 +1789,7 @@ Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
 
 
-Schwartz, et al.        Expires 14 November 2020               [Page 32]
+Schwartz, et al.        Expires 15 November 2020               [Page 32]
 
 Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
@@ -1845,7 +1845,7 @@ Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
 
 
-Schwartz, et al.        Expires 14 November 2020               [Page 33]
+Schwartz, et al.        Expires 15 November 2020               [Page 33]
 
 Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
@@ -1901,7 +1901,7 @@ A.2.  Differences from the proposed HTTP record
 
 
 
-Schwartz, et al.        Expires 14 November 2020               [Page 34]
+Schwartz, et al.        Expires 15 November 2020               [Page 34]
 
 Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
@@ -1957,7 +1957,7 @@ Appendix B.  Design Considerations and Open Issues
 
 
 
-Schwartz, et al.        Expires 14 November 2020               [Page 35]
+Schwartz, et al.        Expires 15 November 2020               [Page 35]
 
 Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
@@ -2013,7 +2013,7 @@ Appendix C.  Change history
 
 
 
-Schwartz, et al.        Expires 14 November 2020               [Page 36]
+Schwartz, et al.        Expires 15 November 2020               [Page 36]
 
 Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
@@ -2069,7 +2069,7 @@ Authors' Addresses
 
 
 
-Schwartz, et al.        Expires 14 November 2020               [Page 37]
+Schwartz, et al.        Expires 15 November 2020               [Page 37]
 
 Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
@@ -2125,4 +2125,4 @@ Internet-Draft        SVCB and HTTPSSVC RRs for DNS             May 2020
 
 
 
-Schwartz, et al.        Expires 14 November 2020               [Page 38]
+Schwartz, et al.        Expires 15 November 2020               [Page 38]
