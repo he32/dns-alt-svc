@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2020-05-14T00:44:43.901559+00:00",
+  "timestamp": "2020-05-21T20:06:12.944972+00:00",
   "repo": "MikeBishop/dns-alt-svc",
   "labels": [
     {
@@ -2096,7 +2096,7 @@
       "labels": [],
       "body": "With Encrypted Client Hello there is an ALPN on both the outer (exposed) and the inner (encrypted).  We should clarify how this interacts with the alpn= attribute.",
       "createdAt": "2020-04-14T14:25:46Z",
-      "updatedAt": "2020-04-15T03:09:26Z",
+      "updatedAt": "2020-05-14T02:50:19Z",
       "closedAt": null,
       "comments": [
         {
@@ -2140,6 +2140,13 @@
           "body": "Since it's been mentioned a few times, I want to clarify that the SVCB \"alpn=\" field does _not_ tell the client what to put in its ALPN field, at least not directly.  It tells the client about what ALPNs the _server_ supports, so that the client can choose transports that will work.  As the text (currently) notes\r\n\r\n> Clients SHOULD also include any other values that they support and could negotiate on that connection with equivalent or better security properties. For example, if the ALPN set only contains \"http/1.1\", the client could include \"http/1.1\" and \"h2\" in the ProtocolNameList.\r\n\r\nI agree that this text is talking about the inner ClientHello, and we need to make that clear in the drafts.",
           "createdAt": "2020-04-15T03:09:25Z",
           "updatedAt": "2020-04-15T03:09:25Z"
+        },
+        {
+          "author": "enygren",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Is what we have there now good enough?\r\n(Or do we also want to mention ALPN on the outer?\r\nThe echo draft has:\r\n\r\n> It then constructs a new ClientHello (ClientHelloOuter) with an innocuous SNI\r\n>    (and potentially innocuous versions of other extensions such as ALPN\r\n>    [RFC7301]) and containing the encrypted ClientHelloInner as an\r\n>    extension.",
+          "createdAt": "2020-05-14T02:50:19Z",
+          "updatedAt": "2020-05-14T02:50:19Z"
         }
       ]
     },
@@ -2314,15 +2321,15 @@
       "id": "MDU6SXNzdWU2MDM1NDMxNzY=",
       "title": "Consider reordering examples",
       "url": "https://github.com/MikeBishop/dns-alt-svc/issues/135",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "bemasc",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "Currently, the examples come before the formal definition of the RR type.  It might be sensible to move them after instead.",
       "createdAt": "2020-04-20T21:20:50Z",
-      "updatedAt": "2020-04-20T22:29:44Z",
-      "closedAt": null,
+      "updatedAt": "2020-05-14T02:43:19Z",
+      "closedAt": "2020-05-14T02:43:19Z",
       "comments": [
         {
           "author": "moonshiner",
@@ -2416,9 +2423,31 @@
       "labels": [],
       "body": "This is an example:\r\nThere are this 2 records for eampleA.com and exampleB.com:\r\nexampleA.com.  7200  IN HTTPSSVC  1 examples.com alpn=h2,h3 esniconfig=\"...\"\r\n\r\nexampleB.com.  7200  IN HTTPSSVC  1 examples.com alpn=h2,h3 esniconfig=\"...\"\r\n\r\nthey map to the same SvcDomainName.\r\nexamplea.com is requested first and there is already established connection to examples.com using sni examplea.com.\r\nNow request for exampleb.com should be made. The request cannot use already existing connection to examples.com unless it is permitted by Origin frame (RFC8336) or Section 9.1.1. in RFC7540 (this is not part of this spec)\r\nA connection can be reused only if ClientHello has not been send yet.\r\nI think this is a correct behavior. Maybe the spec should be more descriptive in Section \"Optimistic pre-connection and connection reuse\". There is this line:\r\n\r\n> If an SVCB record is consistent with an active or in-progress connection C\r\n\r\n`active` is not defining the needed state well, maybe it should be better define for HTTPSSVC case specifically.",
       "createdAt": "2020-05-13T21:36:14Z",
-      "updatedAt": "2020-05-13T21:36:14Z",
+      "updatedAt": "2020-05-15T01:55:42Z",
       "closedAt": null,
-      "comments": []
+      "comments": [
+        {
+          "author": "ddragana",
+          "authorAssociation": "NONE",
+          "body": "Also one more question: Should this draft extend a bit Section 9.1.1. in RFC7540? RFC7540 says that connection can be reuse if an origin host resolves to the the same IP address. Can this criteria be extended to \"the same SvcDomainName\"?",
+          "createdAt": "2020-05-14T05:47:41Z",
+          "updatedAt": "2020-05-14T05:47:50Z"
+        },
+        {
+          "author": "MikeBishop",
+          "authorAssociation": "OWNER",
+          "body": "I'm not sure that requires updating 7540.  If you're resolving the other hostname and it leads to the same SvcDomainName, then you likely have the remaining steps of the resolution cached.  It resolved to the same address.",
+          "createdAt": "2020-05-14T14:48:34Z",
+          "updatedAt": "2020-05-14T14:48:34Z"
+        },
+        {
+          "author": "bemasc",
+          "authorAssociation": "COLLABORATOR",
+          "body": "@ddragana I agree with your analysis of the example you've posed, but I think the current text covers it, by defining \"consistent\" to mean \"the client would attempt an equivalent connection\".  Two connections with different SNI are not equivalent for HTTPS, given the conditions you identified in RFC 7540.\r\n\r\nIf you think it's unclear, we could add a sentence like \"For HTTPS, the criteria for a suitable connection are given in RFC 7540 Section 9.1.1.\".",
+          "createdAt": "2020-05-15T01:55:42Z",
+          "updatedAt": "2020-05-15T01:55:42Z"
+        }
+      ]
     }
   ],
   "pulls": [
@@ -10232,10 +10261,17 @@
       "labels": [],
       "body": "The previous phrasing was redundant.",
       "createdAt": "2020-03-09T21:24:43Z",
-      "updatedAt": "2020-04-13T20:54:25Z",
+      "updatedAt": "2020-05-14T02:47:36Z",
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "master",
+      "baseRefOid": "db3e29b4e108a3c13fa7ec6e88ba56e391541b87",
+      "headRepository": "MikeBishop/dns-alt-svc",
+      "headRefName": "bemasc-alias-wording",
+      "headRefOid": "b43c17ad9bb930b073859829d452d6a9f1061995",
       "closedAt": null,
       "mergedAt": null,
       "mergedBy": null,
+      "mergeCommit": null,
       "comments": [
         {
           "author": "bemasc",
@@ -10259,14 +10295,7 @@
           "updatedAt": "2020-03-09T22:40:57Z",
           "comments": []
         }
-      ],
-      "baseRepository": "MikeBishop/dns-alt-svc",
-      "baseRefName": "master",
-      "baseRefOid": "db3e29b4e108a3c13fa7ec6e88ba56e391541b87",
-      "headRepository": "MikeBishop/dns-alt-svc",
-      "headRefName": "bemasc-alias-wording",
-      "headRefOid": "b43c17ad9bb930b073859829d452d6a9f1061995",
-      "mergeCommit": null
+      ]
     },
     {
       "number": 119,
@@ -10830,24 +10859,26 @@
       "id": "MDExOlB1bGxSZXF1ZXN0NDExODA5MTg3",
       "title": "Move examples to after the specification",
       "url": "https://github.com/MikeBishop/dns-alt-svc/pull/142",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "bemasc",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "This has been requested by multiple reviewers.\r\n\r\nFixes #135",
       "createdAt": "2020-04-30T20:06:53Z",
-      "updatedAt": "2020-05-13T03:58:56Z",
+      "updatedAt": "2020-05-14T02:43:19Z",
       "baseRepository": "MikeBishop/dns-alt-svc",
       "baseRefName": "master",
-      "baseRefOid": "f44f60a9abd9a5b33c13ac5709f61f39ad12eb1c",
+      "baseRefOid": "3dab5b9dc61b48877b39e7cd0459b43ca2e91bd0",
       "headRepository": "MikeBishop/dns-alt-svc",
       "headRefName": "bemasc-move-examples",
-      "headRefOid": "820ae4a872a3b9fad6702e7cb7b07e24c19707d9",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "696a7476c4e789c54c2235c8d6e9ffe9b56a6096",
+      "closedAt": "2020-05-14T02:43:19Z",
+      "mergedAt": "2020-05-14T02:43:18Z",
+      "mergedBy": "enygren",
+      "mergeCommit": {
+        "oid": "80624f4a7d0a7b5f65f5f5de37685598f65233cb"
+      },
       "comments": [
         {
           "author": "enygren",
@@ -10855,9 +10886,30 @@
           "body": "(I'll let you resolve conflicts on this one first since it may be easier to delete and re-do than safely resolve?)",
           "createdAt": "2020-05-13T03:58:56Z",
           "updatedAt": "2020-05-13T03:58:56Z"
+        },
+        {
+          "author": "bemasc",
+          "authorAssociation": "COLLABORATOR",
+          "body": "Thanks. Resolved!",
+          "createdAt": "2020-05-14T00:55:47Z",
+          "updatedAt": "2020-05-14T00:55:47Z"
         }
       ],
-      "reviews": []
+      "reviews": [
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDExNDI3ODY4",
+          "commit": {
+            "abbreviatedOid": "696a747"
+          },
+          "author": "enygren",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2020-05-14T02:43:12Z",
+          "updatedAt": "2020-05-14T02:43:12Z",
+          "comments": []
+        }
+      ]
     },
     {
       "number": 143,
@@ -10976,25 +11028,33 @@
       "id": "MDExOlB1bGxSZXF1ZXN0NDEyNTE1NTE3",
       "title": "Add some text clarifying echoconfig parameter usage.",
       "url": "https://github.com/MikeBishop/dns-alt-svc/pull/145",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "chris-wood",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [],
       "labels": [],
       "body": "cc @bemasc ",
       "createdAt": "2020-05-02T22:15:19Z",
-      "updatedAt": "2020-05-13T02:27:23Z",
+      "updatedAt": "2020-05-15T01:30:40Z",
       "baseRepository": "MikeBishop/dns-alt-svc",
       "baseRefName": "bemasc-echo",
       "baseRefOid": "b0fdcad8400fa7381e55e5b13471b50eea859e30",
       "headRepository": "chris-wood/dns-alt-svc",
       "headRefName": "caw/echo-extension-guidance",
       "headRefOid": "972c053ecca73b1c1fe82814bc6800855f7e547b",
-      "closedAt": null,
+      "closedAt": "2020-05-15T01:30:40Z",
       "mergedAt": null,
       "mergedBy": null,
       "mergeCommit": null,
-      "comments": [],
+      "comments": [
+        {
+          "author": "bemasc",
+          "authorAssociation": "COLLABORATOR",
+          "body": "This clarification has been made in #148.",
+          "createdAt": "2020-05-15T01:30:40Z",
+          "updatedAt": "2020-05-15T01:30:40Z"
+        }
+      ],
       "reviews": [
         {
           "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDA0NTY2ODM4",
@@ -11389,24 +11449,26 @@
       "id": "MDExOlB1bGxSZXF1ZXN0NDE3MDc1MjU0",
       "title": "Explain inner vs. outer ClientHello",
       "url": "https://github.com/MikeBishop/dns-alt-svc/pull/148",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "bemasc",
       "authorAssociation": "COLLABORATOR",
       "assignees": [],
       "labels": [],
       "body": "As requested here: https://github.com/MikeBishop/dns-alt-svc/pull/145#discussion_r424102426",
       "createdAt": "2020-05-13T02:27:00Z",
-      "updatedAt": "2020-05-14T00:44:04Z",
+      "updatedAt": "2020-05-15T01:30:09Z",
       "baseRepository": "MikeBishop/dns-alt-svc",
-      "baseRefName": "bemasc-echo",
-      "baseRefOid": "b0fdcad8400fa7381e55e5b13471b50eea859e30",
+      "baseRefName": "master",
+      "baseRefOid": "3dab5b9dc61b48877b39e7cd0459b43ca2e91bd0",
       "headRepository": "MikeBishop/dns-alt-svc",
       "headRefName": "bemasc-echo-guidance",
-      "headRefOid": "ca478f0c944569059988494c1fe29e483fabec7c",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "headRefOid": "6d5b630527986d41384b21217cd3796cc978c681",
+      "closedAt": "2020-05-14T02:38:45Z",
+      "mergedAt": "2020-05-14T02:38:45Z",
+      "mergedBy": "enygren",
+      "mergeCommit": {
+        "oid": "d9d7e49bcf66daed9260c37bb6b456a7dbfb2f0c"
+      },
       "comments": [],
       "reviews": [
         {
@@ -11425,11 +11487,100 @@
               "originalPosition": 11,
               "body": "Do we want to add to the example that the ECHOConfig could specify a dummy ALPN TLS extension for the outer client hello (for middlebox compatibility) but it is ignored for connection establishment?  Similarly, explaining how SNI fits in here might be helpful to readers.  (ie, that the \"outer\" contains a dummy SNI from the ECHOConfig and the \"inner\" contains the SNI from the Origin.) ",
               "createdAt": "2020-05-13T03:58:20Z",
-              "updatedAt": "2020-05-14T00:44:04Z"
+              "updatedAt": "2020-05-14T00:50:18Z"
             }
           ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDExMzkyNjA4",
+          "commit": {
+            "abbreviatedOid": "ca478f0"
+          },
+          "author": "bemasc",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-14T00:45:53Z",
+          "updatedAt": "2020-05-14T00:45:53Z",
+          "comments": [
+            {
+              "originalPosition": 11,
+              "body": "> Do we want to add to the example that the ECHOConfig could specify a dummy ALPN TLS extension for the outer client hello (for middlebox compatibility) but it is ignored for connection establishment?\r\n\r\nI don't think this is a good place to speculate on possible future extensions to a different draft.  (I also think that particular extension is unlikely to happen any time soon.)\r\n\r\n> Similarly, explaining how SNI fits in here might be helpful to readers. (ie, that the \"outer\" contains a dummy SNI from the ECHOConfig and the \"inner\" contains the SNI from the Origin.)\r\n\r\nAdded.\r\n",
+              "createdAt": "2020-05-14T00:45:53Z",
+              "updatedAt": "2020-05-14T00:50:18Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDExNDI2NDMy",
+          "commit": {
+            "abbreviatedOid": "6d5b630"
+          },
+          "author": "enygren",
+          "authorAssociation": "COLLABORATOR",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2020-05-14T02:37:58Z",
+          "updatedAt": "2020-05-14T02:37:59Z",
+          "comments": [
+            {
+              "originalPosition": 11,
+              "body": "Maybe I misread the ECHO draft, but I thought this was allowed? It's given as an example. But may be more detail than is needed here.",
+              "createdAt": "2020-05-14T02:37:58Z",
+              "updatedAt": "2020-05-14T02:37:59Z"
+            }
+          ]
+        },
+        {
+          "id": "MDE3OlB1bGxSZXF1ZXN0UmV2aWV3NDExNDI2NjIy",
+          "commit": {
+            "abbreviatedOid": "6d5b630"
+          },
+          "author": "enygren",
+          "authorAssociation": "COLLABORATOR",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2020-05-14T02:38:40Z",
+          "updatedAt": "2020-05-14T02:38:40Z",
+          "comments": []
         }
       ]
+    },
+    {
+      "number": 150,
+      "id": "MDExOlB1bGxSZXF1ZXN0NDIxNTQ3Nzk1",
+      "title": "Rename ECHO to ECH.",
+      "url": "https://github.com/MikeBishop/dns-alt-svc/pull/150",
+      "state": "MERGED",
+      "author": "chris-wood",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "See https://github.com/tlswg/draft-ietf-tls-esni/pull/236/files for the related ECHO change.",
+      "createdAt": "2020-05-21T19:50:04Z",
+      "updatedAt": "2020-05-21T20:05:47Z",
+      "baseRepository": "MikeBishop/dns-alt-svc",
+      "baseRefName": "master",
+      "baseRefOid": "80624f4a7d0a7b5f65f5f5de37685598f65233cb",
+      "headRepository": "chris-wood/dns-alt-svc",
+      "headRefName": "caw/echo-to-ech",
+      "headRefOid": "e09927ac003eb2ba6bd5e65756310b654b130498",
+      "closedAt": "2020-05-21T20:05:32Z",
+      "mergedAt": "2020-05-21T20:05:32Z",
+      "mergedBy": "enygren",
+      "mergeCommit": {
+        "oid": "85717d7ddc6ae145da818fbed713ca0c1d78a176"
+      },
+      "comments": [
+        {
+          "author": "enygren",
+          "authorAssociation": "COLLABORATOR",
+          "body": "(Looks good to me)",
+          "createdAt": "2020-05-21T20:05:47Z",
+          "updatedAt": "2020-05-21T20:05:47Z"
+        }
+      ],
+      "reviews": []
     }
   ]
 }
